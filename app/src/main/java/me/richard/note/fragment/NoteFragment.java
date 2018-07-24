@@ -126,6 +126,8 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
         configMain(note);
 
         configDrawer(note);
+
+        tryToLocate();
     }
 
     private void initViewModels() {
@@ -543,6 +545,7 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
         location.setModelType(ModelType.NOTE);
         showLocationInfo(location);
         locationViewModel.saveModel(location);
+        getBinding().main.tvWeather.setText(location.getLocationDesc());
     }
 
     @Override
@@ -689,6 +692,7 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
             }
         }
     }
+
 
     @Override
     public void onBackPressed() {

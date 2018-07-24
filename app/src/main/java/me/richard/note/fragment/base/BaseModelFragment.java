@@ -372,6 +372,7 @@ public abstract class BaseModelFragment<T extends Model, V extends ViewDataBindi
                 location.setProvince(bdLocation.getProvince());
                 location.setCity(bdLocation.getCity());
                 location.setDistrict(bdLocation.getDistrict());
+                location.setLocationDesc(bdLocation.getLocationDescribe());
                 onGetLocation(location);
             } else {
                 ToastUtils.makeToast(R.string.failed_to_get_location);

@@ -215,6 +215,53 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_weather"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@mipmap/icon_weather"/>
+                        <TextView
+                            android:id="@+id/tv_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/weather"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_location"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@mipmap/icon_location"/>
+                        <TextView
+                            android:id="@+id/tv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/location"/>
+                    </LinearLayout>
+
+                    
+                </LinearLayout>
+
             </LinearLayout>
 
         </my.shouheng.palmmarkdown.fastscroller.FastScrollScrollView>

@@ -599,5 +599,7 @@
     <!--region 1.1.6-->
     <string name="custom_fast_scroller">自定義滑動條</string>
     <string name="custom_fast_scroller_sub">勾選複選框則在筆記列表界面使用快速滑動條</string>
+    <string name="weather">天氣</string>
+    <string name="location">位置</string>
     <!--endregion-->
 </resources>
