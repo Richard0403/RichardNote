@@ -602,5 +602,6 @@
     <string name="custom_fast_scroller_sub">Check the box if you want to use fast scroller in notes list page.</string>
     <string name="weather">weather</string>
     <string name="location">location</string>
+    <string name="select_notebook">Selelct notebook</string>
     <!--endregion-->
 </resources>

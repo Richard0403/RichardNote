@@ -601,5 +601,6 @@
     <string name="custom_fast_scroller_sub">勾選複選框則在筆記列表界面使用快速滑動條</string>
     <string name="weather">天氣</string>
     <string name="location">位置</string>
+    <string name="select_notebook">選擇筆記本</string>
     <!--endregion-->
 </resources>

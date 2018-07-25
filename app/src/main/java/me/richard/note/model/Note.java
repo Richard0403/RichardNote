@@ -6,6 +6,7 @@ import android.os.Parcelable;
 
 import java.util.Date;
 
+import me.richard.note.PalmApp;
 import me.richard.note.model.enums.NoteType;
 import me.richard.note.model.enums.Status;
 import me.richard.note.provider.annotation.Column;
@@ -40,6 +41,24 @@ public class Note extends Model implements Parcelable {
 
     @Column(name = NoteSchema.PREVIEW_CONTENT)
     private String previewContent;
+
+    @Column(name = NoteSchema.LAT)
+    private double latitude;
+
+    @Column(name = NoteSchema.LNT)
+    private double longitude;
+
+    @Column(name = NoteSchema.LOC_POI)
+    private String locPoi;
+
+    @Column(name = NoteSchema.LOC_CITY)
+    private String locCity;
+
+    @Column(name = NoteSchema.WEATHER)
+    private String weather;
+
+    @Column(name = NoteSchema.TEMPERATURE)
+    private int temperature;
 
     // region Android端字段，不计入数据库
 
@@ -84,8 +103,15 @@ public class Note extends Model implements Parcelable {
         setTags(in.readString());
         setNoteType(NoteType.getTypeById(in.readInt()));
         setPreviewContent(in.readString());
-
         setTagsName(in.readString());
+
+        setLatitude(in.readDouble());
+        setLongitude(in.readDouble());
+        setLocPoi(in.readString());
+        setLocCity(in.readString());
+        setWeather(in.readString());
+        setTemperature(in.readInt());
+
     }
 
     public static final Creator<Note> CREATOR = new Creator<Note>() {
@@ -164,6 +190,55 @@ public class Note extends Model implements Parcelable {
         this.previewContent = previewContent;
     }
 
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getLocPoi() {
+        return locPoi;
+    }
+
+    public void setLocPoi(String locPoi) {
+        this.locPoi = locPoi;
+    }
+
+    public String getLocCity() {
+        return locCity;
+    }
+
+    public void setLocCity(String locCity) {
+        this.locCity = locCity;
+    }
+
+    public String getWeather() {
+        return weather;
+    }
+
+    public void setWeather(String weather) {
+        this.weather = weather;
+    }
+
+    public int getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(int temperature) {
+        this.temperature = temperature;
+    }
+
     @Override
     public String toString() {
         return "Note{" +
@@ -175,9 +250,15 @@ public class Note extends Model implements Parcelable {
                 ", previewImage=" + previewImage +
                 ", noteType=" + noteType +
                 ", previewContent='" + previewContent + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", locPoi='" + locPoi + '\'' +
+                ", locCity='" + locCity + '\'' +
+                ", weather='" + weather + '\'' +
+                ", temperature='" + temperature + '\'' +
                 ", content='" + content + '\'' +
                 ", tagsName='" + tagsName + '\'' +
-                "} " + super.toString();
+                '}';
     }
 
     @Override
@@ -203,7 +284,13 @@ public class Note extends Model implements Parcelable {
         dest.writeString(getTags());
         dest.writeInt(getNoteType().getId());
         dest.writeString(getPreviewContent());
-
         dest.writeString(getTagsName());
+
+        dest.writeDouble(getLatitude());
+        dest.writeDouble(getLongitude());
+        dest.writeString(getLocPoi());
+        dest.writeString(getLocCity());
+        dest.writeString(getWeather());
+        dest.writeInt(getTemperature());
     }
 }

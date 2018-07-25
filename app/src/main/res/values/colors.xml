@@ -47,6 +47,16 @@
     <color name="dark_theme_empty_sub_text_color">@color/white38</color>
     <color name="dark_theme_empty_icon_tint_color">@color/white38</color>
 
+    <color name="txt_deep">#333333</color>
+    <color name="txt_deep_50">#7f333333</color>
+    <color name="txt_yellow">#D58D11</color>
+    <color name="txt_light_grey">#999999</color>
+    <color name="txt_middle_grey">#666666</color>
+    <color name="txt_grey_8A">#8A8A8A</color>
+    <color name="txt_grey_8A_50">#7f8A8A8A</color>
+    <color name="txt_red">#FF5454</color>
+    <color name="txt_deep_red">#A10808</color>
+
     <color name="kitkat_gray_dark">#25000000</color>
     <color name="kitkat_gray_light">#19000000</color>
 
@@ -57,4 +67,5 @@
 
     <color name="menu_container_light">#a0ffffff</color>
     <color name="menu_container_dark">#a0000000</color>
+    <color name="light_grey">#eeeeee</color>
 </resources>

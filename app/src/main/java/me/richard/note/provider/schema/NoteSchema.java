@@ -12,4 +12,11 @@ public interface NoteSchema extends BaseSchema {
     String PREVIEW_IMAGE = "preview_image";
     String NOTE_TYPE = "note_type";
     String PREVIEW_CONTENT = "preview_content";
+
+    String LAT = "latitude";
+    String LNT = "longitude";
+    String LOC_POI = "location_poi";
+    String LOC_CITY = "location_city";
+    String WEATHER = "weather";
+    String TEMPERATURE = "temperature";
 }

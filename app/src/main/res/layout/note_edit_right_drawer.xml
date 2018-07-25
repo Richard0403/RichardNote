@@ -68,6 +68,20 @@
                     android:text="@string/text_add_tags"
                     android:gravity="center_vertical"
                     android:layout_height="50dp" />
+                <TextView
+                    android:id="@+id/tv_folder"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ellipsize="end"
+                    android:drawableStart="@drawable/ic_move_to_inbox_black_24dp"
+                    android:drawablePadding="13dp"
+                    android:paddingStart="13dp"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:text="@string/select_notebook"
+                    android:tint="@color/md_grey_500"/>
+
 
                 <me.richard.note.widget.FlowLayout
                     android:id="@+id/fl_labels"
@@ -152,6 +166,8 @@
                     android:text="@string/text_statistic"
                     android:gravity="center_vertical"
                     android:layout_height="50dp" />
+
+
 
             </LinearLayout>
 

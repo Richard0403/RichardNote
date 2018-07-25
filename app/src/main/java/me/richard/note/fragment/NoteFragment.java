@@ -29,7 +29,9 @@ import org.polaric.colorful.BaseActivity;
 import org.polaric.colorful.PermissionUtils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import me.richard.note.PalmApp;
@@ -38,6 +40,7 @@ import me.richard.note.activity.ContentActivity;
 import me.richard.note.activity.MenuSortActivity;
 import me.richard.note.async.CreateAttachmentTask;
 import me.richard.note.config.Constants;
+import me.richard.note.constants.AppConst;
 import me.richard.note.databinding.FragmentNoteBinding;
 import me.richard.note.dialog.AttachmentPickerDialog;
 import me.richard.note.dialog.LinkInputDialog;
@@ -49,7 +52,11 @@ import me.richard.note.model.Attachment;
 import me.richard.note.model.Category;
 import me.richard.note.model.Location;
 import me.richard.note.model.Note;
+import me.richard.note.model.Weather;
 import me.richard.note.model.enums.ModelType;
+import me.richard.note.net.HttpRequest;
+import me.richard.note.net.api.OtherService;
+import me.richard.note.net.entity.WeatherEntity;
 import me.richard.note.util.AttachmentHelper;
 import me.richard.note.util.ColorUtils;
 import me.richard.note.util.FileHelper;
@@ -68,6 +75,9 @@ import me.richard.note.viewmodel.NotebookViewModel;
 import me.richard.note.widget.FlowLayout;
 import me.richard.note.widget.MDItemView;
 import my.shouheng.palmmarkdown.tools.MarkdownFormat;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by wangshouheng on 2017/5/12.*/
@@ -127,7 +137,9 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
 
         configDrawer(note);
 
-        tryToLocate();
+        if(StringUtils.isEmpty(note.getLocPoi()) || StringUtils.isEmpty(note.getWeather())){
+            tryToLocate();
+        }
     }
 
     private void initViewModels() {
@@ -296,8 +308,8 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
             switch (notebookResource.status) {
                 case SUCCESS:
                     if (notebookResource.data != null) {
-                        getBinding().main.tvFolder.setText(notebookResource.data.getTitle());
-                        getBinding().main.tvFolder.setTextColor(notebookResource.data.getColor());
+                        getBinding().drawer.tvFolder.setText(notebookResource.data.getTitle());
+                        getBinding().drawer.tvFolder.setTextColor(notebookResource.data.getColor());
                     }
                     break;
             }
@@ -314,7 +326,7 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
         getBinding().main.etContent.setText(note.getContent());
         getBinding().main.etContent.addTextChangedListener(contentWatcher);
 
-        getBinding().main.llFolder.setOnClickListener(v -> showNotebookPicker());
+
 
         getBinding().main.rlBottomEditors.setVisibility(View.GONE);
 
@@ -338,12 +350,12 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
 
     private void addBottomMenus() {
         getBinding().main.llContainer.removeAllViews();
-        int dp12 = ViewUtils.dp2Px(getContext(), 12);
+        int dp8 = ViewUtils.dp2Px(getContext(), 8);
         List<MarkdownFormat> markdownFormats = UserPreferences.getInstance().getMarkdownFormats();
         for (MarkdownFormat markdownFormat : markdownFormats) {
             MDItemView mdItemView = new MDItemView(getContext());
             mdItemView.setMarkdownFormat(markdownFormat);
-            mdItemView.setPadding(dp12, dp12, dp12, dp12);
+            mdItemView.setPadding(dp8, dp8, dp8, dp8);
             getBinding().main.llContainer.addView(mdItemView);
             mdItemView.setOnClickListener(v -> {
                 if (markdownFormat == MarkdownFormat.CHECKBOX
@@ -467,6 +479,7 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
             getBinding().drawer.drawerToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
             getBinding().drawer.getRoot().setBackgroundColor(getResources().getColor(R.color.dark_theme_background));
         }
+        getBinding().drawer.tvFolder.setOnClickListener(v -> showNotebookPicker());
 
         updateCharsInfo();
         getBinding().drawer.tvTimeInfo.setText(ModelHelper.getTimeInfo(note));
@@ -503,8 +516,8 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
         NotebookPickerDialog.newInstance().setOnItemSelectedListener((dialog, value, position) -> {
             note.setParentCode(value.getCode());
             note.setTreePath(value.getTreePath() + "|" + value.getCode());
-            getBinding().main.tvFolder.setText(value.getTitle());
-            getBinding().main.tvFolder.setTextColor(value.getColor());
+            getBinding().drawer.tvFolder.setText(value.getTitle());
+            getBinding().drawer.tvFolder.setTextColor(value.getColor());
             setContentChanged();
             dialog.dismiss();
         }).show(Objects.requireNonNull(getFragmentManager()), "NOTEBOOK_PICKER");
@@ -521,6 +534,7 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
         }
         getBinding().drawer.tvLocationInfo.setVisibility(View.VISIBLE);
         getBinding().drawer.tvLocationInfo.setText(ModelHelper.getFormatLocation(location));
+        getBinding().main.tvLocation.setText(location.getLocationDesc());
     }
     // endregion
 
@@ -544,8 +558,47 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
         location.setModelCode(note.getCode());
         location.setModelType(ModelType.NOTE);
         showLocationInfo(location);
+        setNoteLocation(location);
         locationViewModel.saveModel(location);
-        getBinding().main.tvLocation.setText(location.getLocationDesc());
+
+        getWeather(location);
+    }
+
+    private void setNoteLocation(Location location) {
+        note.setLocCity(location.getCity());
+        note.setLocPoi(location.getLocationDesc());
+        note.setLatitude(location.getLatitude());
+        note.setLongitude(location.getLongitude());
+    }
+
+    private void getWeather(Location location) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("key", AppConst.WEATHER_KEY);
+        params.put("language","zh-Hans");
+        params.put("location", location.getLatitude()+":"+location.getLongitude());
+//        params.put("location","shenzhen");
+        params.put("unit","c");
+        LogUtils.i(params);
+        HttpRequest.startGetMethod(AppConst.WEATHER_URL, params, OtherService.class, "getWeather", new Callback<WeatherEntity>() {
+            @Override
+            public void onResponse(Call<WeatherEntity> call, Response<WeatherEntity> response) {
+                try {
+                    List<WeatherEntity.ResultsBean> result = response.body().getResults();
+                    if(!result.isEmpty()){
+                        getBinding().main.tvWeather.setText(result.get(0).getNow().getText()+" "+result.get(0).getNow().getTemperature()+"°C");
+                        note.setWeather(result.get(0).getNow().getText());
+                        note.setTemperature(result.get(0).getNow().getTemperature());
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Call call, Throwable t) {
+
+            }
+        });
     }
 
     @Override
