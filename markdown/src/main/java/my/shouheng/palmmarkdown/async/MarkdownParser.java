@@ -69,7 +69,7 @@ public class MarkdownParser extends AsyncTask<String, String, String> {
                 .build();
 
         HtmlRenderer renderer = HtmlRenderer.builder(OPTIONS)
-                .escapeHtml(true)
+                .escapeHtml(false)
                 .attributeProviderFactory(new IndependentAttributeProviderFactory() {
                     @Override
                     public AttributeProvider create(NodeRendererContext context) {
@@ -88,7 +88,7 @@ public class MarkdownParser extends AsyncTask<String, String, String> {
         if (mathJaxPattern == null) {
             mathJaxPattern = Pattern.compile(MATH_REGEX);
         }
-
+        content = content.replaceAll("\n","<br>");
         Matcher matcher = mathJaxPattern.matcher(content);
         String matched, replaced;
         while (matcher.find()) {
