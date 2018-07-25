@@ -184,4 +184,14 @@ public class StringUtils {
         }
         return number;
     }
+
+
+    /**
+     * 判断是否为空
+     * @param str
+     * @return
+     */
+    public static boolean isEmpty(final String str) {
+        return (str == null) || (str.length() == 0);
+    }
 }

@@ -545,7 +545,7 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
         location.setModelType(ModelType.NOTE);
         showLocationInfo(location);
         locationViewModel.saveModel(location);
-        getBinding().main.tvWeather.setText(location.getLocationDesc());
+        getBinding().main.tvLocation.setText(location.getLocationDesc());
     }
 
     @Override

@@ -114,7 +114,7 @@
 
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="6igztKEkuseyYB93qYAcsaOx6tUYvp7W" />
+            android:value="aiA6Li5uRE1bd7WfazNYcsjIxmW4lDS9" />
         <!-- ================Baidu Map API END================ -->
 
         <provider

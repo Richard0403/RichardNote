@@ -35,6 +35,8 @@ public class LocationManager {
         LocationClientOption option = new LocationClientOption();
         option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);
         option.setIsNeedAddress(true);
+        option.setIsNeedLocationDescribe(true);
+        option.setIsNeedLocationPoiList(true);
         mLocationClient.setLocOption(option);
         mLocationClient.requestLocation();
         mLocationClient.start();

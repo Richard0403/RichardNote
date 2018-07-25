@@ -15,6 +15,9 @@ import android.widget.TextView;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.color.ColorChooserDialog;
 
+import com.baidu.location.Poi;
+import com.facebook.stetho.common.StringUtil;
+import me.richard.note.util.*;
 import org.polaric.colorful.PermissionUtils;
 
 import java.util.LinkedList;
@@ -33,12 +36,6 @@ import me.richard.note.model.Model;
 import me.richard.note.model.ModelFactory;
 import me.richard.note.model.data.Resource;
 import me.richard.note.provider.CategoryStore;
-import me.richard.note.util.AppWidgetUtils;
-import me.richard.note.util.LogUtils;
-import me.richard.note.util.NetworkUtils;
-import me.richard.note.util.ShortcutHelper;
-import me.richard.note.util.ToastUtils;
-import me.richard.note.util.ViewUtils;
 import me.richard.note.viewmodel.BaseViewModel;
 import me.richard.note.viewmodel.CategoryViewModel;
 import me.richard.note.widget.FlowLayout;
@@ -372,7 +369,14 @@ public abstract class BaseModelFragment<T extends Model, V extends ViewDataBindi
                 location.setProvince(bdLocation.getProvince());
                 location.setCity(bdLocation.getCity());
                 location.setDistrict(bdLocation.getDistrict());
-                location.setLocationDesc(bdLocation.getLocationDescribe());
+                List<Poi> pois = bdLocation.getPoiList();
+                if(!pois.isEmpty()){
+                    location.setLocationDesc(pois.get(0).getName());
+                }else if(StringUtils.isEmpty(bdLocation.getLocationDescribe())){
+                    location.setLocationDesc(bdLocation.getLocationDescribe());
+                }else{
+                    location.setLocationDesc(getString(R.string.location));
+                }
                 onGetLocation(location);
             } else {
                 ToastUtils.makeToast(R.string.failed_to_get_location);
