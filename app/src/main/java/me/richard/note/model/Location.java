@@ -35,16 +35,16 @@ public class Location extends Model {
     @Column(name = LocationSchema.MODEL_TYPE)
     private ModelType modelType;
 
-    @Column(name = LocationSchema.LOCATION_DESCRIBE)
-    private String locationDesc;
+    @Column(name = LocationSchema.LOC_POI)
+    private String locPoi;
 
 
-    public String getLocationDesc() {
-        return locationDesc;
+    public String getLocPoi() {
+        return locPoi;
     }
 
-    public void setLocationDesc(String locationDesc) {
-        this.locationDesc = locationDesc;
+    public void setLocPoi(String locPoi) {
+        this.locPoi = locPoi;
     }
 
     public double getLongitude() {
@@ -120,7 +120,7 @@ public class Location extends Model {
                 ", province='" + province + '\'' +
                 ", city='" + city + '\'' +
                 ", district='" + district + '\'' +
-                ", district='" + locationDesc + '\'' +
+                ", district='" + locPoi + '\'' +
                 ", modelCode=" + modelCode +
                 ", modelType=" + (modelType == null ? null : modelType.name()) +
                 "} " + super.toString();

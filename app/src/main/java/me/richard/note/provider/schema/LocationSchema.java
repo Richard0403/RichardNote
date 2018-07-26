@@ -10,7 +10,7 @@ public interface LocationSchema extends BaseSchema {
     String PROVINCE = "province";
     String CITY = "city";
     String DISTRICT = "district";
-    String LOCATION_DESCRIBE = "describe";
+    String LOC_POI = "loc_poi";
     String MODEL_CODE = "model_code";
     String MODEL_TYPE = "model_type";
 }

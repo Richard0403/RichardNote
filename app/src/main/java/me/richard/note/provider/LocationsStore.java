@@ -52,6 +52,7 @@ public class LocationsStore extends BaseStore<Location> {
         model.setCity(cursor.getString(cursor.getColumnIndex(LocationSchema.CITY)));
         model.setDistrict(cursor.getString(cursor.getColumnIndex(LocationSchema.DISTRICT)));
         model.setModelCode(cursor.getLong(cursor.getColumnIndex(LocationSchema.MODEL_CODE)));
+        model.setLocPoi(cursor.getString(cursor.getColumnIndex(LocationSchema.LOC_POI)));
         model.setModelType(ModelType.getTypeById(cursor.getInt(cursor.getColumnIndex(LocationSchema.MODEL_TYPE))));
     }
 
@@ -62,6 +63,7 @@ public class LocationsStore extends BaseStore<Location> {
         values.put(LocationSchema.COUNTRY, model.getCountry());
         values.put(LocationSchema.PROVINCE, model.getProvince());
         values.put(LocationSchema.CITY, model.getCity());
+        values.put(LocationSchema.LOC_POI, model.getLocPoi());
         values.put(LocationSchema.DISTRICT, model.getDistrict());
         values.put(LocationSchema.MODEL_CODE, model.getModelCode());
         values.put(LocationSchema.MODEL_TYPE, model.getModelType().id);
@@ -98,7 +100,7 @@ public class LocationsStore extends BaseStore<Location> {
         SQLiteDatabase database = getWritableDatabase();
         try {
             cursor = database.rawQuery(" SELECT DISTINCT "
-                    + LocationSchema.COUNTRY + "," + LocationSchema.PROVINCE + "," + LocationSchema.CITY + "," + LocationSchema.DISTRICT
+                    + LocationSchema.COUNTRY + "," + LocationSchema.PROVINCE + "," + LocationSchema.CITY + "," + LocationSchema.DISTRICT + "," + LocationSchema.LOC_POI
                     + " FROM " + tableName
                     + " WHERE " + BaseSchema.USER_ID + " = " + userId
                     + (TextUtils.isEmpty(whereSQL) ? "" : " AND " + whereSQL)

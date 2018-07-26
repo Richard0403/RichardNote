@@ -16,7 +16,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.color.ColorChooserDialog;
 
 import com.baidu.location.Poi;
-import com.facebook.stetho.common.StringUtil;
+
 import me.richard.note.util.*;
 import org.polaric.colorful.PermissionUtils;
 
@@ -371,11 +371,11 @@ public abstract class BaseModelFragment<T extends Model, V extends ViewDataBindi
                 location.setDistrict(bdLocation.getDistrict());
                 List<Poi> pois = bdLocation.getPoiList();
                 if(!pois.isEmpty()){
-                    location.setLocationDesc(pois.get(0).getName());
+                    location.setLocPoi(pois.get(0).getName());
                 }else if(StringUtils.isEmpty(bdLocation.getLocationDescribe())){
-                    location.setLocationDesc(bdLocation.getLocationDescribe());
+                    location.setLocPoi(bdLocation.getLocationDescribe());
                 }else{
-                    location.setLocationDesc(getString(R.string.location));
+                    location.setLocPoi(getString(R.string.location));
                 }
                 onGetLocation(location);
             } else {

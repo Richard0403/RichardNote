@@ -73,6 +73,9 @@ public class NotesAdapter extends BaseMultiItemQuickAdapter<NotesAdapter.MultiIt
         helper.setText(R.id.tv_added_time, TimeUtils.getLongDateTime(context, note.getAddedTime()));
         helper.setImageDrawable(R.id.iv_icon, ColorUtils.tintDrawable(
                 context.getResources().getDrawable(R.drawable.ic_doc_text_alpha), accentColor));
+
+        helper.setBackgroundRes(R.id.ll_card, isDarkTheme ?
+                R.drawable.bg_round_dark: R.drawable.bg_round_light);
     }
 
     private void convertNoteExpanded(BaseViewHolder holder, Note note) {
@@ -82,7 +85,7 @@ public class NotesAdapter extends BaseMultiItemQuickAdapter<NotesAdapter.MultiIt
         holder.setText(R.id.tv_content, note.getPreviewContent());
 //        holder.setText(R.id.tv_time, TimeUtils.getPrettyTime(note.getAddedTime()));
 //        holder.setTextColor(R.id.tv_time, accentColor);
-        holder.getView(R.id.rl_card).setBackgroundResource(isDarkTheme ?
+        holder.setBackgroundRes(R.id.rl_card, isDarkTheme ?
                 R.drawable.bg_round_dark: R.drawable.bg_round_light);
         String weather = note.getWeather() == null? "":note.getWeather();
         holder.setText(R.id.tv_time, FormatUtils.getFormatDateTime("HH:mm", note.getAddedTime().getTime())+" · "+weather);
@@ -112,6 +115,8 @@ public class NotesAdapter extends BaseMultiItemQuickAdapter<NotesAdapter.MultiIt
         helper.setText(R.id.tv_added_time, str);
         helper.setImageDrawable(R.id.iv_icon, ColorUtils.tintDrawable(
                 context.getResources().getDrawable(R.drawable.ic_folder_black_24dp), nbColor));
+        helper.setBackgroundRes(R.id.ll_card, isDarkTheme ?
+                R.drawable.bg_round_dark: R.drawable.bg_round_light);
     }
 
     @Override

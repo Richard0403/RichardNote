@@ -52,7 +52,6 @@ import me.richard.note.model.Attachment;
 import me.richard.note.model.Category;
 import me.richard.note.model.Location;
 import me.richard.note.model.Note;
-import me.richard.note.model.Weather;
 import me.richard.note.model.enums.ModelType;
 import me.richard.note.net.HttpRequest;
 import me.richard.note.net.api.OtherService;
@@ -326,7 +325,8 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
         getBinding().main.etContent.setText(note.getContent());
         getBinding().main.etContent.addTextChangedListener(contentWatcher);
 
-
+        getBinding().main.tvWeather.setText(note.getWeather()+" "+note.getTemperature()+"°C");
+        getBinding().main.tvLocation.setText(note.getLocPoi());
 
         getBinding().main.rlBottomEditors.setVisibility(View.GONE);
 
@@ -534,7 +534,7 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
         }
         getBinding().drawer.tvLocationInfo.setVisibility(View.VISIBLE);
         getBinding().drawer.tvLocationInfo.setText(ModelHelper.getFormatLocation(location));
-        getBinding().main.tvLocation.setText(location.getLocationDesc());
+        getBinding().main.tvLocation.setText(location.getLocPoi());
     }
     // endregion
 
@@ -566,7 +566,7 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
 
     private void setNoteLocation(Location location) {
         note.setLocCity(location.getCity());
-        note.setLocPoi(location.getLocationDesc());
+        note.setLocPoi(location.getLocPoi());
         note.setLatitude(location.getLatitude());
         note.setLongitude(location.getLongitude());
     }

@@ -76,6 +76,13 @@ public class NotesStore extends BaseStore<Note> {
         note.setPreviewImage(TextUtils.isEmpty(preUri) ? null : Uri.parse(preUri));
         note.setNoteType(NoteType.getTypeById(cursor.getInt(cursor.getColumnIndex(NoteSchema.NOTE_TYPE))));
         note.setPreviewContent(cursor.getString(cursor.getColumnIndex(NoteSchema.PREVIEW_CONTENT)));
+
+        note.setLatitude(cursor.getDouble(cursor.getColumnIndex(NoteSchema.LAT)));
+        note.setLongitude(cursor.getDouble(cursor.getColumnIndex(NoteSchema.LNT)));
+        note.setLocPoi(cursor.getString(cursor.getColumnIndex(NoteSchema.LOC_POI)));
+        note.setLocCity(cursor.getString(cursor.getColumnIndex(NoteSchema.LOC_CITY)));
+        note.setWeather(cursor.getString(cursor.getColumnIndex(NoteSchema.WEATHER)));
+        note.setTemperature(cursor.getInt(cursor.getColumnIndex(NoteSchema.TEMPERATURE)));
     }
 
     @Override
@@ -89,5 +96,13 @@ public class NotesStore extends BaseStore<Note> {
         values.put(NoteSchema.PREVIEW_IMAGE, uri == null ? null : uri.toString());
         values.put(NoteSchema.NOTE_TYPE, note.getNoteType().getId());
         values.put(NoteSchema.PREVIEW_CONTENT, note.getPreviewContent());
+
+        values.put(NoteSchema.LAT, note.getLatitude());
+        values.put(NoteSchema.LNT, note.getLongitude());
+        values.put(NoteSchema.LOC_POI, note.getLocPoi());
+        values.put(NoteSchema.LOC_CITY, note.getLocCity());
+        values.put(NoteSchema.WEATHER, note.getWeather());
+        values.put(NoteSchema.TEMPERATURE, note.getTemperature());
+
     }
 }

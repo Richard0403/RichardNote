@@ -153,6 +153,7 @@ public class StoreHelper {
                 location.setProvince(cursor.getString(cursor.getColumnIndex(LocationSchema.PROVINCE)));
                 location.setCity(cursor.getString(cursor.getColumnIndex(LocationSchema.CITY)));
                 location.setDistrict(cursor.getString(cursor.getColumnIndex(LocationSchema.DISTRICT)));
+                location.setLocPoi(cursor.getString(cursor.getColumnIndex(LocationSchema.LOC_POI)));
                 locations.add(location);
             } while (cursor.moveToNext());
         }
