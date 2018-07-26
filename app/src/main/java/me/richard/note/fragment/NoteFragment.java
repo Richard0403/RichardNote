@@ -25,6 +25,7 @@ import android.widget.RelativeLayout;
 
 import com.balysv.materialmenu.MaterialMenuDrawable;
 
+import com.facebook.stetho.common.StringUtil;
 import org.polaric.colorful.BaseActivity;
 import org.polaric.colorful.PermissionUtils;
 
@@ -325,7 +326,12 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
         getBinding().main.etContent.setText(note.getContent());
         getBinding().main.etContent.addTextChangedListener(contentWatcher);
 
-        getBinding().main.tvWeather.setText(note.getWeather()+" "+note.getTemperature()+"°C");
+        if(!StringUtils.isEmpty(note.getWeather())){
+            getBinding().main.tvWeather.setText(note.getWeather()+" "+note.getTemperature()+"°C");
+        }else{
+            getBinding().main.tvWeather.setText("");
+        }
+
         getBinding().main.tvLocation.setText(note.getLocPoi());
 
         getBinding().main.rlBottomEditors.setVisibility(View.GONE);
@@ -561,7 +567,9 @@ public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
         setNoteLocation(location);
         locationViewModel.saveModel(location);
 
-        getWeather(location);
+        if(StringUtils.isEmpty(note.getWeather())){
+            getWeather(location);
+        }
     }
 
     private void setNoteLocation(Location location) {

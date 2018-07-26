@@ -37,6 +37,8 @@ public class LocationManager {
         option.setIsNeedAddress(true);
         option.setIsNeedLocationDescribe(true);
         option.setIsNeedLocationPoiList(true);
+        option.setScanSpan(0);
+        option.setOpenGps(true);
         mLocationClient.setLocOption(option);
         mLocationClient.requestLocation();
         mLocationClient.start();
