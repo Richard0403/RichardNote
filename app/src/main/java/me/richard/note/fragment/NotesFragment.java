@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
@@ -66,6 +67,8 @@ public class NotesFragment extends BaseFragment<FragmentNotesBinding> implements
     private NotebookViewModel notebookViewModel;
 
     private UserPreferences userPreferences;
+
+    private TextView tv_header;
 
     public static NotesFragment newInstance(@Nonnull Status status) {
         Bundle args = new Bundle();
@@ -147,7 +150,17 @@ public class NotesFragment extends BaseFragment<FragmentNotesBinding> implements
 
         getBinding().ivEmpty.setSubTitle(noteViewModel.getEmptySubTitle(status));
 
-        adapter = new NotesAdapter(getContext(), Collections.emptyList());
+        adapter = new NotesAdapter(this, Collections.emptyList());
+
+        View footer = View.inflate(getContext(), R.layout.layout_footer,null);
+        View header = View.inflate(getContext(), R.layout.layout_header,null);
+        adapter.addHeaderView(header);
+        adapter.addFooterView(footer);
+        tv_header = header.findViewById(R.id.tv_header);
+        tv_header.setText(getString(R.string.note_count, 0));
+        footer.setBackgroundResource(isDarkTheme()?  R.color.dark_theme_background : R.color.light_theme_background);
+        header.setBackgroundResource(isDarkTheme()?  R.color.dark_theme_background : R.color.light_theme_background);
+
         adapter.setOnItemClickListener((adapter, view, position) -> {
             NotesAdapter.MultiItem item = (NotesAdapter.MultiItem) adapter.getData().get(position);
             if (item.itemType == NotesAdapter.MultiItem.ITEM_TYPE_NOTE) {
@@ -180,7 +193,7 @@ public class NotesFragment extends BaseFragment<FragmentNotesBinding> implements
             }
         });
 
-        getBinding().rvNotes.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL_LIST, isDarkTheme()));
+//        getBinding().rvNotes.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL_LIST, isDarkTheme()));
         getBinding().rvNotes.setItemAnimator(new CustomItemAnimator());
         getBinding().rvNotes.setLayoutManager(new LinearLayoutManager(getContext()));
         if (scrollListener != null) getBinding().rvNotes.addOnScrollListener(scrollListener);
@@ -329,6 +342,15 @@ public class NotesFragment extends BaseFragment<FragmentNotesBinding> implements
             switch (multiItemResource.status) {
                 case SUCCESS:
                     adapter.setNewData(multiItemResource.data);
+                    int count = 0;
+                    for (NotesAdapter.MultiItem item : multiItemResource.data){
+                        if(item.getItemType() == NotesAdapter.MultiItem.ITEM_TYPE_NOTEBOOK){
+                            count+=item.notebook.getCount();
+                        }else{
+                            count+=1;
+                        }
+                    }
+                    tv_header.setText(getString(R.string.note_count, count));
                     break;
                 case LOADING:
                     break;

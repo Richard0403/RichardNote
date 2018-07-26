@@ -27,7 +27,7 @@
 
                 <FrameLayout
                     android:id="@+id/rl_menu_container"
-                    android:background="#a0ffffff"
+                    android:background="@color/transparent"
                     android:visibility="gone"
                     tools:visibility="visible"
                     android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="10dp"
-                    app:menu_showShadow="true"
+                    app:menu_showShadow="false"
                     app:menu_shadowColor="#66000000"
                     app:menu_shadowRadius="4dp"
                     app:menu_shadowXOffset="1dp"

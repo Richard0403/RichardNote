@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">写点笔记</string>
+    <string name="app_name">写点日记</string>
 
     <!--region Common-->
     <string name="text_add_more">添加&#8230;</string>
@@ -87,22 +87,22 @@
 
     <!--region Common->Announcement-->
     <string name="need_to_complete">该功能尚待完善</string>
-    <string name="dialog_notice_content_part1">用户你好！<![CDATA[<br/><br/>]]>由于时间限制仍然马克笔记有许多不足。我们邀请你来一起完善：</string>
-    <string name="dialog_notice_content_part2">1.如果你喜欢马克笔记你可以在<![CDATA[<b>“设置->关于程序->翻译”</b> ]]>中协助开发者将马克笔记翻译成其他语言，或者在应用商店给该应用好评。</string>
-    <string name="dialog_notice_content_part3">2.如果你有其他的需求想要实现，或者对马克笔记的功能有不满意的地方，可以通过<![CDATA[<b>Google+社区、Twitter、Weibo或者直接邮件</b>]]>的方式与开发者讨论需求。</string>
-    <string name="dialog_notice_content_part4">3.如果你发现了马克笔记中存在BUG和意外崩溃，可以在<![CDATA[<b>“设置->信息反馈”</b>]]>或者<![CDATA[<b>直接邮件开发者</b>]]>进行反馈。</string>
-    <string name="dialog_notice_content_part5">4.马克笔记会在后续推出一些新的功能和特性，如果你喜欢该应用，可以在<![CDATA[<b>“设置->支持开发”</b>]]>中支持程序的开发。</string>
+    <string name="dialog_notice_content_part1">用户你好！<![CDATA[<br/><br/>]]>由于时间限制仍然初心日记有许多不足。我们邀请你来一起完善：</string>
+    <string name="dialog_notice_content_part2">1.如果你喜欢初心日记你可以在<![CDATA[<b>“设置->关于程序->翻译”</b> ]]>中协助开发者将初心日记翻译成其他语言，或者在应用商店给该应用好评。</string>
+    <string name="dialog_notice_content_part3">2.如果你有其他的需求想要实现，或者对初心日记的功能有不满意的地方，可以通过<![CDATA[<b>Google+社区、Twitter、Weibo或者直接邮件</b>]]>的方式与开发者讨论需求。</string>
+    <string name="dialog_notice_content_part4">3.如果你发现了初心日记中存在BUG和意外崩溃，可以在<![CDATA[<b>“设置->信息反馈”</b>]]>或者<![CDATA[<b>直接邮件开发者</b>]]>进行反馈。</string>
+    <string name="dialog_notice_content_part5">4.初心日记会在后续推出一些新的功能和特性，如果你喜欢该应用，可以在<![CDATA[<b>“设置->支持开发”</b>]]>中支持程序的开发。</string>
     <string name="dialog_notice_content_part6">5.另外，你也可以通过<![CDATA[<b>Google+社区、Twitter和Weibo</b>]]>获取程序开发的最新动态，并可以参与测试。</string>
-    <string name="dialog_notice_content_part7">请给予马克笔记更多的耐心，我们会努力做得更好。<![CDATA[<br/><br/>]]>最后，祝你使用愉快！</string>
+    <string name="dialog_notice_content_part7">请给予初心日记更多的耐心，我们会努力做得更好。<![CDATA[<br/><br/>]]>最后，祝你使用愉快！</string>
     <!--endregion-->
 
     <!--region Common->Intro Page-->
     <string name="intro_1_title">欢迎使用 %s</string>
-    <string name="intro_1_description">感谢您使用 %s\n\n一款帮助您提升工作效率\n记录生活中精彩时刻的\nMarkdown笔记应用</string>
+    <string name="intro_1_description">感谢您使用 %s\n\n一款帮助您提升工作效率\n记录生活中精彩时刻的\nMarkdown日记应用</string>
     <string name="intro_2_title">Markdown</string>
     <string name="intro_2_description">Markdown语法支持\n分享、导出图片和PDF</string>
     <string name="intro_3_title">导出</string>
-    <string name="intro_3_description">Html md/text png pdf等\n多种格式导出笔记</string>
+    <string name="intro_3_description">Html md/text png pdf等\n多种格式导出日记</string>
     <string name="intro_4_title">主题</string>
     <string name="intro_4_description">日夜主题\n13种主色调 16种强调色</string>
     <string name="intro_5_title">附件</string>
@@ -127,7 +127,7 @@
     <!--endregion-->
 
     <!--region Common->DrawerItems-->
-    <string name="drawer_menu_notes">笔记信息</string>
+    <string name="drawer_menu_notes">日记信息</string>
     <string name="drawer_menu_minds">小纸条</string>
     <string name="drawer_menu_tags">标签</string>
     <string name="drawer_menu_notices">提醒信息</string>
@@ -139,8 +139,8 @@
     <!--endregion-->
 
     <!--region Fab-->
-    <string name="fab_opt_note">笔记</string>
-    <string name="fab_opt_notebook">笔记本</string>
+    <string name="fab_opt_note">日记</string>
+    <string name="fab_opt_notebook">日记本</string>
     <string name="fab_opt_tags">标签</string>
     <string name="fab_opt_capture">拍照</string>
     <string name="fab_opt_file">文件</string>
@@ -148,7 +148,7 @@
     <string name="fab_opt_link">链接</string>
     <string name="fab_opt_record">录音</string>
     <string name="fab_opt_notice">提醒</string>
-    <string name="fab_quick_note">快速笔记</string>
+    <string name="fab_quick_note">快速日记</string>
 
     <string name="fab_sort_custom_fab">自定义浮动按钮</string>
     <string name="fab_sort_custom">自定义&#8230;</string>
@@ -159,32 +159,32 @@
     <!--endregion-->
 
     <!--region Note-->
-    <string name="note_default_name">未命名笔记</string>
+    <string name="note_default_name">未命名日记</string>
 
     <string name="content_failed_to_parse_intent">无法解析的意图</string>
     <string name="note_failed_to_read_file">读取文件内容失败</string>
-    <string name="note_failed_to_get_note_content">读取笔记内容失败</string>
-    <string name="text_no_such_note">没有找到该笔记</string>
-    <string name="note_note_title">笔记标题</string>
+    <string name="note_failed_to_get_note_content">读取日记内容失败</string>
+    <string name="text_no_such_note">没有找到该日记</string>
+    <string name="note_note_title">日记标题</string>
     <string name="note_write_down_what_you_want">写下此刻的想法&#8230;</string>
-    <string name="note_default_notebook">默认笔记本</string>
-    <string name="edit_notebook">编辑笔记本</string>
-    <string name="notebook_name">笔记本名称</string>
-    <string name="pick_notebook_color">选择笔记本的颜色</string>
-    <string name="note_capture_note">笔记截图</string>
-    <string name="all_notes">全部笔记</string>
+    <string name="note_default_notebook">默认日记本</string>
+    <string name="edit_notebook">编辑日记本</string>
+    <string name="notebook_name">日记本名称</string>
+    <string name="pick_notebook_color">选择日记本的颜色</string>
+    <string name="note_capture_note">日记截图</string>
+    <string name="all_notes">全部日记</string>
     <string name="text_replace_tab_with_4_spaces">使用4个空格替换退格</string>
 
-    <string name="notes_list_empty">笔记列表为空</string>
-    <string name="notes_list_empty_sub_normal">点击主界面的 + 按钮添加笔记</string>
-    <string name="notes_list_empty_sub_archived">没有发现归档的笔记</string>
-    <string name="notes_list_empty_sub_trashed">没有在垃圾箱中发现笔记</string>
+    <string name="notes_list_empty">日记列表为空</string>
+    <string name="notes_list_empty_sub_normal">点击主界面的 + 按钮添加日记</string>
+    <string name="notes_list_empty_sub_archived">没有发现归档的日记</string>
+    <string name="notes_list_empty_sub_trashed">没有在垃圾箱中发现日记</string>
     <string name="move_to_another_notebook">移动</string>
     <string name="moved_successfully">移动成功</string>
-    <string name="msg_when_delete_notebook">删除该笔记本会同时删除包含的所有笔记和笔记本</string>
+    <string name="msg_when_delete_notebook">删除该日记本会同时删除包含的所有日记和日记本</string>
 
-    <string name="pick_notebook">选择笔记本</string>
-    <string name="no_notebook_available">没有可用的笔记本</string>
+    <string name="pick_notebook">选择日记本</string>
+    <string name="no_notebook_available">没有可用的日记本</string>
 
     <string name="pick_category">选择标签</string>
     <string name="no_category_available">没有可用标签</string>
@@ -193,16 +193,16 @@
     <string name="tag_name">标签名称</string>
     <string name="pick_tag_color">选择标签颜色</string>
     <plurals name="notes_number">
-        <item quantity="one">%d 个笔记</item>
-        <item quantity="other">%d 个笔记</item>
+        <item quantity="one">%d 个日记</item>
+        <item quantity="other">%d 个日记</item>
     </plurals>
-    <string name="tag_delete_message">删除该标签不会删除其相关的笔记。</string>
+    <string name="tag_delete_message">删除该标签不会删除其相关的日记。</string>
     <string name="tags_list_empty">标签列表为空</string>
     <string name="tags_list_empty_sub_normal">点击主界面的 + 按钮添加标签</string>
     <string name="tags_list_empty_sub_archived">没有发现归档的标签</string>
     <string name="tags_list_empty_sub_trashed">没有在垃圾箱中发现标签</string>
 
-    <string name="edit_quick_note">快速创建笔记</string>
+    <string name="edit_quick_note">快速创建日记</string>
     <!--endregion-->
 
     <!--region Attachment-->
@@ -257,8 +257,8 @@
 
     <!--region Enums-->
     <string name="model_name_none">None</string>
-    <string name="model_name_note">笔记</string>
-    <string name="model_name_notebook">笔记本</string>
+    <string name="model_name_note">日记</string>
+    <string name="model_name_notebook">日记本</string>
     <string name="model_name_alarm">闹钟</string>
     <string name="model_name_attachment">附件</string>
     <string name="model_name_location">位置</string>
@@ -357,12 +357,12 @@
     <!--endregion-->
 
     <!--region Setting->Note-->
-    <string name="setting_note">笔记设置</string>
-    <string name="setting_note_sub">笔记相关的设置</string>
-    <string name="setting_default_note_file_extension">笔记的默认文件拓展名</string>
-    <string name="setting_default_note_file_extension_sub">创建的笔记文件的默认拓展名</string>
-    <string name="setting_note_list_view_expand">使用展开的笔记列表</string>
-    <string name="setting_note_list_view_expand_sub">勾选使用拓展的笔记列表视图，相反则使用简化版的笔记列表</string>
+    <string name="setting_note">日记设置</string>
+    <string name="setting_note_sub">日记相关的设置</string>
+    <string name="setting_default_note_file_extension">日记的默认文件拓展名</string>
+    <string name="setting_default_note_file_extension_sub">创建的日记文件的默认拓展名</string>
+    <string name="setting_note_list_view_expand">使用展开的日记列表</string>
+    <string name="setting_note_list_view_expand_sub">勾选使用拓展的日记列表视图，相反则使用简化版的日记列表</string>
     <!--endregion-->
 
     <!--region Setting->Theme-->
@@ -374,7 +374,7 @@
     <string name="setting_dashboard_user_info_bg_sub">设置主界面中显示的背景图</string>
     <string name="setting_dashboard_user_motto">座右铭</string>
     <string name="setting_dashboard_user_motto_sub">设置用于主界面显示的文字</string>
-    <string name="setting_dashboard_user_motto_default">欢迎使用 马克笔记</string>
+    <string name="setting_dashboard_user_motto_default">欢迎使用 初心日记</string>
 
     <string name="setting_theme">应用主题</string>
     <string name="setting_dark_theme">夜间主题</string>
@@ -419,7 +419,7 @@
 
     <!--region Setting->AppInfo-->
     <string name="app_info">程序信息</string>
-    <string name="app_description">一款基于Material Design的开源Markdown笔记应用</string>\
+    <string name="app_description">一款基于Material Design的开源Markdown日记应用</string>\
     <string name="help_development">协助开发</string>
     <string name="translation">翻译</string>
     <string name="translate_to_other_languages">将 %s 翻译成其他语言</string>
@@ -471,11 +471,11 @@
     <string name="not_login_try_after_login">未登录，请登录后再次尝试</string>
     <string name="timeline_detail">最近都做了什么</string>
     <string name="statistic_of_this_week">本周的数据统计</string>
-    <string name="activities_in_seven_days">最近7天添加的笔记</string>
+    <string name="activities_in_seven_days">最近7天添加的日记</string>
     <string name="logout">退出登录</string>
 
     <string name="statistic_activities">最近7天</string>
-    <string name="statistic_title_activities">最近7天添加的笔记和小纸条</string>
+    <string name="statistic_title_activities">最近7天添加的日记和小纸条</string>
     <string name="statistic_models_added">添加的数据实体</string>
     <string name="statistic_title_models_added">添加的数据实体的统计结果</string>
     <string name="statistic_attachments_added">添加的附件</string>
@@ -588,9 +588,9 @@
     <string name="custom_fab">自定义浮动按钮</string>
     <string name="custom_fab_sub">自定义主界面的浮动按钮</string>
     <string name="custom_note_menu">自定义菜单</string>
-    <string name="menu_sort_tips">拖动尾部的图标进行拖拽，最终的排序结果就是笔记编辑界面的最终排序。</string>
-    <string name="setting_custom_note_menu">自定义笔记编辑菜单</string>
-    <string name="setting_custom_note_menu_sub">自定义笔记编辑界面的底部菜单</string>
+    <string name="menu_sort_tips">拖动尾部的图标进行拖拽，最终的排序结果就是日记编辑界面的最终排序。</string>
+    <string name="setting_custom_note_menu">自定义日记编辑菜单</string>
+    <string name="setting_custom_note_menu_sub">自定义日记编辑界面的底部菜单</string>
     <string name="menu_successfully_saved">成功保存菜单设置</string>
     <string name="setting_preferences">偏好</string>
     <string name="setting_preferences_sub">设置你自己的偏好</string>
@@ -598,9 +598,10 @@
 
     <!--region 1.1.6-->
     <string name="custom_fast_scroller">自定义滑动条</string>
-    <string name="custom_fast_scroller_sub">勾选复选框则在笔记列表界面使用快速滑动条</string>
+    <string name="custom_fast_scroller_sub">勾选复选框则在日记列表界面使用快速滑动条</string>
     <string name="weather">天气</string>
     <string name="location">位置</string>
-    <string name="select_notebook">选择笔记本</string>
+    <string name="select_notebook">选择日记本</string>
+    <string name="note_count">你写了 %1$d 篇日记</string>
     <!--endregion-->
 </resources>

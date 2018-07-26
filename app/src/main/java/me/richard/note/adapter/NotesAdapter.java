@@ -1,7 +1,9 @@
 package me.richard.note.adapter;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -14,10 +16,12 @@ import java.util.List;
 
 import me.richard.note.PalmApp;
 import me.richard.note.R;
+import me.richard.note.fragment.base.BaseFragment;
 import me.richard.note.model.Note;
 import me.richard.note.model.Notebook;
 import me.richard.note.util.ColorUtils;
 import me.richard.note.util.FileHelper;
+import me.richard.note.util.FormatUtils;
 import me.richard.note.util.TimeUtils;
 import me.richard.note.util.preferences.NotePreferences;
 import me.richard.note.widget.tools.BubbleTextGetter;
@@ -28,16 +32,17 @@ public class NotesAdapter extends BaseMultiItemQuickAdapter<NotesAdapter.MultiIt
         BubbleTextGetter {
 
     private Context context;
+    private BaseFragment baseFragment;
 
     private int accentColor;
     private boolean isDarkTheme;
     private boolean isExpanded;
 
-    public NotesAdapter(Context context, List<NotesAdapter.MultiItem> data) {
+    public NotesAdapter(BaseFragment baseFragment, List<NotesAdapter.MultiItem> data) {
         super(data);
-
+        this.baseFragment = baseFragment;
         this.isExpanded = NotePreferences.getInstance().isNoteExpanded();
-        this.context = context;
+        this.context = baseFragment.getContext();
         addItemType(MultiItem.ITEM_TYPE_NOTE, isExpanded ? R.layout.item_note_expanded : R.layout.item_note);
         addItemType(MultiItem.ITEM_TYPE_NOTEBOOK, R.layout.item_note);
 
@@ -75,8 +80,18 @@ public class NotesAdapter extends BaseMultiItemQuickAdapter<NotesAdapter.MultiIt
                 R.color.dark_theme_background : R.color.light_theme_background));
         holder.setText(R.id.tv_note_title, note.getTitle());
         holder.setText(R.id.tv_content, note.getPreviewContent());
-        holder.setText(R.id.tv_time, TimeUtils.getPrettyTime(note.getAddedTime()));
-        holder.setTextColor(R.id.tv_time, accentColor);
+//        holder.setText(R.id.tv_time, TimeUtils.getPrettyTime(note.getAddedTime()));
+//        holder.setTextColor(R.id.tv_time, accentColor);
+        holder.getView(R.id.rl_card).setBackgroundResource(isDarkTheme ?
+                R.drawable.bg_round_dark: R.drawable.bg_round_light);
+        String weather = note.getWeather() == null? "":note.getWeather();
+        holder.setText(R.id.tv_time, FormatUtils.getFormatDateTime("HH:mm", note.getAddedTime().getTime())+" · "+weather);
+        holder.setText(R.id.tv_location, note.getLocPoi());
+        String day = FormatUtils.getFormatDateTime("dd", note.getAddedTime().getTime());
+        String month = FormatUtils.getFormatDateTime("M月/E", note.getAddedTime().getTime());
+        holder.setText(R.id.tv_date, day);
+        holder.setText(R.id.tv_month, month);
+
         if (note.getPreviewImage() != null) {
             holder.getView(R.id.iv_image).setVisibility(View.VISIBLE);
             Uri thumbnailUri = FileHelper.getThumbnailUri(context, note.getPreviewImage());

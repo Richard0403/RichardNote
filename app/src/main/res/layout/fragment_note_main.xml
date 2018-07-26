@@ -227,7 +227,6 @@
                             android:text="@string/location"/>
                     </LinearLayout>
 
-                    
                 </LinearLayout>
 
             </LinearLayout>
