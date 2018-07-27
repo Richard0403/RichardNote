@@ -3,6 +3,7 @@ package me.richard.note.util;
 import android.text.TextUtils;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -193,5 +194,15 @@ public class StringUtils {
      */
     public static boolean isEmpty(final String str) {
         return (str == null) || (str.length() == 0);
+    }
+
+    public static List<String> getMatchers(String regex, String source){
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(source);
+        List<String> list = new ArrayList<>();
+        while (matcher.find()) {
+            list.add(matcher.group());
+        }
+        return list;
     }
 }

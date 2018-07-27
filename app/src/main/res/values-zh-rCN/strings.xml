@@ -603,5 +603,6 @@
     <string name="location">位置</string>
     <string name="select_notebook">选择日记本</string>
     <string name="note_count">你写了 %1$d 篇日记</string>
+    <string name="picture_disp">【图片】</string>
     <!--endregion-->
 </resources>

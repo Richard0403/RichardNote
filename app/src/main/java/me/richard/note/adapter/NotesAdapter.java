@@ -16,12 +16,14 @@ import java.util.List;
 
 import me.richard.note.PalmApp;
 import me.richard.note.R;
+import me.richard.note.config.Constants;
 import me.richard.note.fragment.base.BaseFragment;
 import me.richard.note.model.Note;
 import me.richard.note.model.Notebook;
 import me.richard.note.util.ColorUtils;
 import me.richard.note.util.FileHelper;
 import me.richard.note.util.FormatUtils;
+import me.richard.note.util.StringUtils;
 import me.richard.note.util.TimeUtils;
 import me.richard.note.util.preferences.NotePreferences;
 import me.richard.note.widget.tools.BubbleTextGetter;
@@ -82,7 +84,8 @@ public class NotesAdapter extends BaseMultiItemQuickAdapter<NotesAdapter.MultiIt
         holder.itemView.setBackgroundColor(PalmApp.getColorCompact(isDarkTheme ?
                 R.color.dark_theme_background : R.color.light_theme_background));
         holder.setText(R.id.tv_note_title, note.getTitle());
-        holder.setText(R.id.tv_content, note.getPreviewContent());
+        holder.setText(R.id.tv_content, getShortPreviewContent(note.getPreviewContent()));
+
 //        holder.setText(R.id.tv_time, TimeUtils.getPrettyTime(note.getAddedTime()));
 //        holder.setTextColor(R.id.tv_time, accentColor);
         holder.setBackgroundRes(R.id.rl_card, isDarkTheme ?
@@ -117,6 +120,19 @@ public class NotesAdapter extends BaseMultiItemQuickAdapter<NotesAdapter.MultiIt
                 context.getResources().getDrawable(R.drawable.ic_folder_black_24dp), nbColor));
         helper.setBackgroundRes(R.id.ll_card, isDarkTheme ?
                 R.drawable.bg_round_dark: R.drawable.bg_round_light);
+    }
+
+
+    private String getShortPreviewContent(String previewContent){
+        List<String> pics = StringUtils.getMatchers(Constants.IMAGE_REGEX, previewContent);
+        for (String pic : pics){
+            previewContent = previewContent.replace(pic,mContext.getString(R.string.picture_disp));
+        }
+        List<String> files = StringUtils.getMatchers(Constants.FILE_REGEX, previewContent);
+        for (String file : files){
+            previewContent = previewContent.replace(file,mContext.getString(R.string.picture_disp));
+        }
+        return previewContent;
     }
 
     @Override

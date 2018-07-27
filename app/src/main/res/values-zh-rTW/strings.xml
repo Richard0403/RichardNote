@@ -603,5 +603,6 @@
     <string name="location">位置</string>
     <string name="select_notebook">選擇筆記本</string>
     <string name="note_count">You have %1$d notes</string>
+    <string name="picture_disp">【圖片】</string>
     <!--endregion-->
 </resources>
