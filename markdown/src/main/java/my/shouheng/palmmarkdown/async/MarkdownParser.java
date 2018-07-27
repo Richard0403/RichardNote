@@ -54,7 +54,8 @@ public class MarkdownParser extends AsyncTask<String, String, String> {
             .set(FootnoteExtension.FOOTNOTE_REF_PREFIX, "[")
             .set(FootnoteExtension.FOOTNOTE_REF_SUFFIX, "]")
             .set(HtmlRenderer.FENCED_CODE_LANGUAGE_CLASS_PREFIX, "")
-            .set(HtmlRenderer.FENCED_CODE_NO_LANGUAGE_CLASS, "nohighlight");
+            .set(HtmlRenderer.FENCED_CODE_NO_LANGUAGE_CLASS, "nohighlight")
+            .set(HtmlRenderer.SOFT_BREAK, "<br />\n");
 
     private OnGetResultListener onGetResultListener;
 
@@ -69,7 +70,7 @@ public class MarkdownParser extends AsyncTask<String, String, String> {
                 .build();
 
         HtmlRenderer renderer = HtmlRenderer.builder(OPTIONS)
-                .escapeHtml(false)
+                .escapeHtml(true)
                 .attributeProviderFactory(new IndependentAttributeProviderFactory() {
                     @Override
                     public AttributeProvider create(NodeRendererContext context) {
@@ -88,7 +89,6 @@ public class MarkdownParser extends AsyncTask<String, String, String> {
         if (mathJaxPattern == null) {
             mathJaxPattern = Pattern.compile(MATH_REGEX);
         }
-        content = content.replaceAll("\n","<br>");
         Matcher matcher = mathJaxPattern.matcher(content);
         String matched, replaced;
         while (matcher.find()) {
@@ -104,6 +104,7 @@ public class MarkdownParser extends AsyncTask<String, String, String> {
 
     @Override
     protected void onPostExecute(String html) {
+
         if (onGetResultListener != null) {
             onGetResultListener.onGetResult(html);
         }
