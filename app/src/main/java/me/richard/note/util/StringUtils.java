@@ -201,7 +201,7 @@ public class StringUtils {
         Matcher matcher = pattern.matcher(source);
         List<String> list = new ArrayList<>();
         while (matcher.find()) {
-            list.add(matcher.group());
+            list.add(matcher.group(0));
         }
         return list;
     }

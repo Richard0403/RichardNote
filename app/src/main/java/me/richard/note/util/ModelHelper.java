@@ -232,6 +232,7 @@ public class ModelHelper {
             return noteContent.substring(0, TextLength.NOTE_CONTENT_PREVIEW_LENGTH.length).trim().replace('\n', ' ');
         }
 
+//        return noteContent.trim().replace('\n', ' ');
         return noteContent.trim().replace('\n', ' ');
     }
 

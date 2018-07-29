@@ -1,4 +1,4 @@
-package com.shouheng.notepal;
+package com.richard.note;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
