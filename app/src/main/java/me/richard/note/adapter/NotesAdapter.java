@@ -1,9 +1,7 @@
 package me.richard.note.adapter;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -126,11 +124,11 @@ public class NotesAdapter extends BaseMultiItemQuickAdapter<NotesAdapter.MultiIt
     private String getShortPreviewContent(String previewContent){
         List<String> pics = StringUtils.getMatchers(Constants.IMAGE_REGEX, previewContent);
         for (String pic : pics){
-            previewContent = previewContent.replace(pic,mContext.getString(R.string.picture_disp));
+            previewContent = previewContent.replace(pic,mContext.getString(R.string.disp_picture));
         }
         List<String> files = StringUtils.getMatchers(Constants.FILE_REGEX, previewContent);
         for (String file : files){
-            previewContent = previewContent.replace(file,mContext.getString(R.string.picture_disp));
+            previewContent = previewContent.replace(file,mContext.getString(R.string.disp_file));
         }
         return previewContent;
     }

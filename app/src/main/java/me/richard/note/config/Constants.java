@@ -94,8 +94,11 @@ public class Constants {
             "/E33toB493pf9gS2xwIDAQAB";
 
     public final static String TITLE_REGEX = "^(#+)(.*)";
-    public final static String IMAGE_REGEX = "!\\[.*]\\(.+.\\)";
-    public final static String FILE_REGEX = "\\[.*]\\(.+.\\)";
+//    public final static String IMAGE_REGEX = "!\\[.*]\\(.+.\\)";
+//    public final static String FILE_REGEX = "\\[.*]\\(.+.\\)";
+
+    public final static String IMAGE_REGEX = "!\\[.*?]\\(.+?\\)";
+    public final static String FILE_REGEX = "\\[.*?]\\(.+?\\)";
 
     public final static String HTML_EXPORT_DIR_NAME = "ExportedHtml";
     public final static String TEXT_EXPORT_DIR_NAME = "ExportedText";
