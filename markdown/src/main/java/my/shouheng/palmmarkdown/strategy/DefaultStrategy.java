@@ -4,7 +4,7 @@ import android.text.TextUtils;
 import android.widget.EditText;
 
 /**
- * Created by wangshouheng on 2017/10/7.*/
+ * Created by Richard on 2017/10/7.*/
 public class DefaultStrategy implements MdParseStrategy {
 
     @Override

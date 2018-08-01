@@ -5,7 +5,7 @@ import android.support.annotation.DrawableRes;
 import my.shouheng.palmmarkdown.R;
 
 /**
- * Created by wangshouheng on 2017/6/29. */
+ * Created by Richard on 2017/6/29. */
 public enum MarkdownFormat {
     ITALIC(0, R.drawable.ic_format_italic_black_24dp, true),
     BOLD(1, R.drawable.ic_format_bold_black_24dp, true),

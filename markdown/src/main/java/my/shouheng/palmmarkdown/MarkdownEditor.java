@@ -14,7 +14,7 @@ import my.shouheng.palmmarkdown.strategy.MdParseStrategy;
 import my.shouheng.palmmarkdown.tools.MarkdownFormat;
 
 /**
- * Created by wangshouheng on 2017/6/29.*/
+ * Created by Richard on 2017/6/29.*/
 public class MarkdownEditor extends android.support.v7.widget.AppCompatEditText {
 
     /* 操作序号(一次编辑可能对应多个操作，如替换文字，就是删除+插入) */

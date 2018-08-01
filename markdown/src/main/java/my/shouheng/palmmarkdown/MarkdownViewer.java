@@ -19,7 +19,7 @@ import my.shouheng.palmmarkdown.tools.FileHelper;
 import my.shouheng.palmmarkdown.tools.MdWebViewClient;
 
 /**
- * Created by wangshouheng on 2017/6/29. */
+ * Created by Richard on 2017/6/29. */
 public class MarkdownViewer extends FastScrollWebView {
 
     private static final String TAG = "MarkdownViewer";
