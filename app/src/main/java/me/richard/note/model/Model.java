@@ -10,7 +10,7 @@ import me.richard.note.util.TimeUtils;
 
 
 /**
- * Created by wangshouheng on 2017/3/13. */
+ * Created by Richard on 2017/3/13. */
 public class Model implements Serializable {
 
     @Column(name = BaseSchema.ID)

@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 import me.richard.note.util.ColorUtils;
 
 /**
- * Created by WangShouheng on 2018/3/1. */
+ * Created by Richard on 2018/3/1. */
 public class SupportCardView extends CardView {
 
     public SupportCardView(@NonNull Context context) {

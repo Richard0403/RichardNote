@@ -5,7 +5,7 @@ import me.richard.note.provider.annotation.Table;
 import me.richard.note.provider.schema.NotebookSchema;
 
 /**
- * Created by wangshouheng on 2017/7/23.*/
+ * Created by Richard on 2017/7/23.*/
 @Table(name = NotebookSchema.TABLE_NAME)
 public class Notebook extends Model implements Selectable {
 

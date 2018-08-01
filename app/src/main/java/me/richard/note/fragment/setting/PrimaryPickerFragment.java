@@ -18,7 +18,7 @@ import me.richard.note.util.ColorUtils;
 import me.richard.note.util.preferences.ThemePreferences;
 
 /**
- * Created by wangshouheng on 2017/8/5. */
+ * Created by Richard on 2017/8/5. */
 public class PrimaryPickerFragment extends BaseFragment<FragmentPrimaryPickerBinding> implements OnThemeSelectedListener {
 
     private ThemesListAdapter adapter;

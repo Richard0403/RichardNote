@@ -1,7 +1,7 @@
 package me.richard.note.util.tools;
 
 /**
- * Created by wangshouheng on 2017/8/26. */
+ * Created by Richard on 2017/8/26. */
 public enum TextSize {
     SMALL(0, 17f, 15f, 15f),
     SMALLER(1, 17.5f, 15.5f, 15.5f),

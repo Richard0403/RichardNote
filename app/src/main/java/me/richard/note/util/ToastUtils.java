@@ -6,7 +6,7 @@ import android.widget.Toast;
 import me.richard.note.PalmApp;
 
 /**
- * Created by wangshouheng on 2017/2/25. */
+ * Created by Richard on 2017/2/25. */
 public class ToastUtils {
 
     private static Toast toast;

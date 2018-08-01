@@ -20,7 +20,7 @@ import me.richard.note.widget.CircleImageView;
 import me.richard.note.widget.tools.SpaceItemDecoration;
 
 /**
- * Created by wangshouheng on 2017/4/3.*/
+ * Created by Richard on 2017/4/3.*/
 public class PortraitPickerDialog extends DialogFragment {
 
     private final Portrait[] portraits = Portrait.values();

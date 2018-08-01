@@ -32,7 +32,7 @@ import me.richard.note.util.FileHelper;
 import me.richard.note.util.ToastUtils;
 
 /**
- * Created by wangshouheng on 2017/8/19. */
+ * Created by Richard on 2017/8/19. */
 public class QuickNoteEditor extends DialogFragment {
 
     private MindSnagging mindSnagging;

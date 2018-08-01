@@ -66,7 +66,7 @@ import static me.richard.note.config.Constants._MP4;
 import static me.richard.note.config.Constants._PDF;
 
 /**
- * Created by wangshouheng on 2017/5/13.*/
+ * Created by Richard on 2017/5/13.*/
 public class NoteViewFragment extends BaseFragment<FragmentNoteViewBinding> {
 
     private final static int REQUEST_FOR_EDIT = 0x01;

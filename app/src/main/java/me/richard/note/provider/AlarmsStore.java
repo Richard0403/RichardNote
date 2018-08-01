@@ -21,7 +21,7 @@ import me.richard.note.provider.schema.AlarmSchema;
 
 
 /**
- * Created by wangshouheng on 2017/4/18.*/
+ * Created by Richard on 2017/4/18.*/
 public class AlarmsStore extends BaseStore<Alarm> {
 
     private static AlarmsStore sInstance = null;

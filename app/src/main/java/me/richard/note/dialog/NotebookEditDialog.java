@@ -23,7 +23,7 @@ import me.richard.note.widget.CircleImageView;
 import me.richard.note.widget.WatcherTextView;
 
 /**
- * Created by wangshouheng on 2017/7/23.*/
+ * Created by Richard on 2017/7/23.*/
 @SuppressLint("ValidFragment")
 public class NotebookEditDialog extends DialogFragment {
 

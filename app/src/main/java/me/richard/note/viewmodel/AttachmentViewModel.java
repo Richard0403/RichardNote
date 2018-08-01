@@ -24,7 +24,7 @@ import me.richard.note.util.LogUtils;
 import me.richard.note.util.preferences.NotePreferences;
 
 /**
- * Created by WangShouheng on 2018/3/13.*/
+ * Created by Richard on 2018/3/13.*/
 public class AttachmentViewModel extends BaseViewModel<Attachment> {
 
     @Override

@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * Created by wangshouheng on 2017/3/31.*/
+ * Created by Richard on 2017/3/31.*/
 public class EmptySupportRecyclerView extends RecyclerView {
 
     private View emptyView;

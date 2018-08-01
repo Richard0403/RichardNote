@@ -14,7 +14,7 @@ import me.richard.note.provider.annotation.Table;
 import me.richard.note.provider.schema.NoteSchema;
 
 /**
- * Created by wangshouheng on 2017/5/12.*/
+ * Created by Richard on 2017/5/12.*/
 @Table(name = NoteSchema.TABLE_NAME)
 public class Note extends Model implements Parcelable {
 

@@ -20,7 +20,7 @@ import me.richard.note.util.ColorUtils;
 
 
 /**
- * Created by wangshouheng on 2017/3/15. */
+ * Created by Richard on 2017/3/15. */
 @SuppressLint("ValidFragment")
 public class SimpleEditDialog extends DialogFragment {
 

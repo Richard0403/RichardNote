@@ -7,7 +7,7 @@ import me.richard.note.R;
 
 
 /**
- * Created by wangshouheng on 2017/8/8. */
+ * Created by Richard on 2017/8/8. */
 public enum FabSortItem {
     NOTE(R.string.fab_opt_note, R.drawable.ic_note),
     NOTEBOOK(R.string.fab_opt_notebook, R.drawable.ic_folder_black_24dp),

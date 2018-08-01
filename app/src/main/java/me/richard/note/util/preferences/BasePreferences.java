@@ -10,7 +10,7 @@ import java.util.Set;
 import me.richard.note.PalmApp;
 
 /**
- * Created by WangShouheng on 2018/3/3. */
+ * Created by Richard on 2018/3/3. */
 public class BasePreferences {
 
     private static SharedPreferences mPreferences;

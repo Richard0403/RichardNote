@@ -20,7 +20,7 @@ import me.richard.note.util.ColorUtils;
 import me.richard.note.widget.tools.DividerItemDecoration;
 
 /**
- * Created by wangshouheng on 2017/8/6. */
+ * Created by Richard on 2017/8/6. */
 public class ThemesListAdapter extends RecyclerView.Adapter<ThemesListAdapter.ViewHolder>{
 
     private String title1, title2;

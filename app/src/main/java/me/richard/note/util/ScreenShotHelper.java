@@ -20,7 +20,7 @@ import java.io.IOException;
 import me.richard.note.PalmApp;
 
 /**
- * Created by wangshouheng on 2017/11/17. */
+ * Created by Richard on 2017/11/17. */
 public class ScreenShotHelper {
 
     // region shot recycler view

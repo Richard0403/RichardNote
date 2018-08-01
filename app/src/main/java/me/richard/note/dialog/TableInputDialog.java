@@ -14,7 +14,7 @@ import me.richard.note.databinding.DialogInputTableLayoutBinding;
 import me.richard.note.util.ColorUtils;
 
 /**
- * Created by wangshouheng on 2017/7/1. */
+ * Created by Richard on 2017/7/1. */
 public class TableInputDialog extends DialogFragment {
 
     private OnConfirmClickListener onConfirmClickListener;

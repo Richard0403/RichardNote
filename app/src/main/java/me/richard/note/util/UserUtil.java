@@ -8,7 +8,7 @@ import me.richard.note.model.LoginedUser;
 
 
 /**
- * Created by wangshouheng on 2017/3/13. */
+ * Created by Richard on 2017/3/13. */
 public final class UserUtil {
 
     private static LoginedUser loginedUser;

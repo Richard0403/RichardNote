@@ -18,7 +18,7 @@ import me.richard.note.provider.schema.AttachmentSchema;
 import me.richard.note.provider.schema.BaseSchema;
 
 /**
- * Created by wangshouheng on 2017/4/9.*/
+ * Created by Richard on 2017/4/9.*/
 public class AttachmentsStore extends BaseStore<Attachment> {
 
     private static AttachmentsStore sInstance = null;

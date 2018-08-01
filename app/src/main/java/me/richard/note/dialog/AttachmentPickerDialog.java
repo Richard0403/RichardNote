@@ -21,7 +21,7 @@ import me.richard.note.databinding.DialogAttachmentPickerLayoutBinding;
 import me.richard.note.util.AttachmentHelper;
 
 /**
- * Created by wangshouheng on 2017/4/7.*/
+ * Created by Richard on 2017/4/7.*/
 public class AttachmentPickerDialog extends DialogFragment {
 
     private boolean isRecordVisible;

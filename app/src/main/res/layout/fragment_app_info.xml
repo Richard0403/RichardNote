@@ -49,6 +49,7 @@
                         android:gravity="center_horizontal"
                         android:text="@string/app_description"
                         android:layout_marginStart="20dp"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginEnd="20dp"
                         android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
@@ -106,94 +107,6 @@
                         app:card_icon="@drawable/ic_star_black_24dp"
                         app:card_title="@string/rating"
                         app:card_sub_title="@string/give_good_rating_if_you_like"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-
-                </LinearLayout>
-
-            </me.richard.note.widget.themed.SupportCardView>
-
-            <me.richard.note.widget.themed.SupportCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="@dimen/card_corner_radius"
-                app:cardElevation="@dimen/card_elevation"
-                style="@style/SettingsCardStyle">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:paddingBottom="8dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
-
-                    <me.richard.note.widget.themed.SupportTextView
-                        android:text="@string/thanks"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/SettingsCardTitleStyle"/>
-
-                    <me.richard.note.widget.themed.Divider
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"/>
-
-                    <TextView
-                        android:id="@+id/tv_thanks_details"
-                        android:text="@string/thanks_details"
-                        android:layout_margin="16dp"
-                        android:textSize="15sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </me.richard.note.widget.themed.SupportCardView>
-
-            <me.richard.note.widget.themed.SupportCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="@dimen/card_corner_radius"
-                app:cardElevation="@dimen/card_elevation"
-                style="@style/SettingsCardStyle">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:paddingBottom="8dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
-
-                    <me.richard.note.widget.themed.SupportTextView
-                        android:text="@string/developer_and_license"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/SettingsCardTitleStyle"/>
-
-                    <me.richard.note.widget.themed.Divider
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"/>
-
-                    <me.richard.note.widget.themed.CardTitleView
-                        android:id="@+id/ctv_developer"
-                        app:card_icon="@drawable/ic_person_black_24dp"
-                        app:card_title="@string/developers"
-                        app:card_sub_title="@string/developer_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-
-                    <me.richard.note.widget.themed.CardTitleView
-                        android:id="@+id/ctv_changelog"
-                        app:card_icon="@drawable/ic_description_black_24dp"
-                        app:card_title="@string/changelog"
-                        app:card_sub_title="@string/changelog_sub_title"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
-
-                    <me.richard.note.widget.themed.CardTitleView
-                        android:id="@+id/ctv_license"
-                        app:card_icon="@drawable/ic_insert_drive_file_grey_24dp"
-                        app:card_title="@string/open_source_libraries_permissions"
-                        app:card_sub_title="@string/view_third_part_libraries"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 

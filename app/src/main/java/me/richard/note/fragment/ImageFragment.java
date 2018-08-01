@@ -25,7 +25,7 @@ import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 /**
- * Created by wangshouheng on 2017/4/9.*/
+ * Created by Richard on 2017/4/9.*/
 public class ImageFragment extends Fragment {
 
     private final static String ARG_ATTACHMENT = "arg_attachment";

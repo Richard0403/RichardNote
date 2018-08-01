@@ -39,7 +39,7 @@ import me.richard.note.widget.tools.CustomItemTouchHelper;
 import me.richard.note.widget.tools.DividerItemDecoration;
 
 /**
- * Created by wangshouheng on 2017/3/29.*/
+ * Created by Richard on 2017/3/29.*/
 public class CategoriesFragment extends BaseFragment<FragmentCategoriesBinding> implements
         BaseQuickAdapter.OnItemClickListener, OnMainActivityInteraction {
 

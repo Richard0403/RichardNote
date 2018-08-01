@@ -16,7 +16,7 @@ import me.richard.note.widget.UIRippleButton;
 
 
 /**
- * Created by wangshouheng on 2017/3/11. */
+ * Created by Richard on 2017/3/11. */
 public class RegisterDialog extends DialogFragment{
 
     public static RegisterDialog newInstance() {

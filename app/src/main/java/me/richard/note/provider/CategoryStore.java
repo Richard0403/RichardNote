@@ -20,7 +20,7 @@ import me.richard.note.util.LogUtils;
 import me.richard.note.viewmodel.CategoryViewModel;
 
 /**
- * Created by wangshouheng on 2017/8/19. */
+ * Created by Richard on 2017/8/19. */
 public class CategoryStore extends BaseStore<Category> {
 
     private static CategoryStore sInstance = null;

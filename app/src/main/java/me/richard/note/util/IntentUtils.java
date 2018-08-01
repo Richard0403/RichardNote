@@ -13,7 +13,7 @@ import me.richard.note.R;
 import me.richard.note.config.Constants;
 
 /**
- * Created by wangshouheng on 2017/3/13. */
+ * Created by Richard on 2017/3/13. */
 public class IntentUtils {
 
     public static void sendEmail(Activity context, String subject, String body) {

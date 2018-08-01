@@ -18,7 +18,7 @@ import me.richard.note.widget.CircleImageView;
 
 
 /**
- * Created by wangshouheng on 2017/3/12. */
+ * Created by Richard on 2017/3/12. */
 public class FabSortAdapter extends RecyclerView.Adapter<FabSortAdapter.ViewHolder>{
 
     private List<FabSortItem> fabSortItems;

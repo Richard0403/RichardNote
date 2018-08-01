@@ -24,7 +24,7 @@
     <dimen name="small_text">8sp</dimen>
 
     <dimen name="card_corner_radius">1dp</dimen>
-    <dimen name="card_elevation">5dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
     <dimen name="card_spacing">10dp</dimen>
 
     <dimen name="icon_width_height">24dp</dimen>

@@ -21,7 +21,7 @@ import me.richard.note.util.LogUtils;
 import me.richard.note.util.ToastUtils;
 
 /**
- * Created by wangshouheng on 2017/8/19. */
+ * Created by Richard on 2017/8/19. */
 public class TimeLineFragment extends CommonFragment<FragmentTimeLineBinding> {
 
     private TimeLinesAdapter adapter;

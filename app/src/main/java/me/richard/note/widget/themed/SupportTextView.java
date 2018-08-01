@@ -9,7 +9,7 @@ import me.richard.note.R;
 import me.richard.note.util.ColorUtils;
 
 /**
- * Created by wangshouheng on 2017/12/5.*/
+ * Created by Richard on 2017/12/5.*/
 public class SupportTextView extends AppCompatTextView {
 
     private int lightThemeTextColor;

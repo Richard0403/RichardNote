@@ -49,7 +49,7 @@ import me.richard.note.provider.PalmDB;
 import static java.lang.Long.parseLong;
 
 /**
- * Created by wangshouheng on 2017/4/7.*/
+ * Created by Richard on 2017/4/7.*/
 public class FileHelper {
 
     private static final String EXTERNAL_STORAGE_FOLDER = "NotePal";

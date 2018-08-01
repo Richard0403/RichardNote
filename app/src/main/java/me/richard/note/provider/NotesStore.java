@@ -13,7 +13,7 @@ import me.richard.note.provider.schema.NoteSchema;
 
 
 /**
- * Created by wangshouheng on 2017/5/12.*/
+ * Created by Richard on 2017/5/12.*/
 public class NotesStore extends BaseStore<Note> {
 
     private static NotesStore sInstance = null;

@@ -13,7 +13,7 @@ import java.util.Locale;
 import me.richard.note.PalmApp;
 
 /**
- * Created by wangshouheng on 2017/3/13. */
+ * Created by Richard on 2017/3/13. */
 public class TimeUtils {
 
     private static int daysOfMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};

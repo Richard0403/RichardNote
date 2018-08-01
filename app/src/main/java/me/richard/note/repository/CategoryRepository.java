@@ -16,7 +16,7 @@ import me.richard.note.provider.CategoryStore;
 import me.richard.note.provider.schema.CategorySchema;
 
 /**
- * Created by WangShouheng on 2018/3/13.*/
+ * Created by Richard on 2018/3/13.*/
 public class CategoryRepository extends BaseRepository<Category> {
 
     @Override

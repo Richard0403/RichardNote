@@ -80,7 +80,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * Created by wangshouheng on 2017/5/12.*/
+ * Created by Richard on 2017/5/12.*/
 public class NoteFragment extends BaseModelFragment<Note, FragmentNoteBinding> {
 
     private final static String EXTRA_IS_THIRD_PART = "extra_is_third_part";

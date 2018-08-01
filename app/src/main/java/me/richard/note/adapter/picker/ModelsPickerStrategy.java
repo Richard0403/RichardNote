@@ -6,7 +6,7 @@ import me.richard.note.model.Model;
 
 
 /**
- * Created by wangshouheng on 2017/10/5.*/
+ * Created by Richard on 2017/10/5.*/
 public interface ModelsPickerStrategy<T extends Model> {
 
     String getTitle(T model);

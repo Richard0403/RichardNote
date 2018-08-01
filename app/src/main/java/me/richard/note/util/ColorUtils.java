@@ -23,7 +23,7 @@ import me.richard.note.R;
 import me.richard.note.util.preferences.ThemePreferences;
 
 /**
- * Created by wangshouheng on 2017/3/31.*/
+ * Created by Richard on 2017/3/31.*/
 public class ColorUtils {
 
     private static Boolean isDarkTheme;

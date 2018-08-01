@@ -19,7 +19,7 @@ import javax.crypto.Cipher;
 import me.richard.note.config.Constants;
 
 /**
- * Created by wangshouheng on 2017/2/27.*/
+ * Created by Richard on 2017/2/27.*/
 public class RSAUtil {
 
     private static String RSA = "RSA";

@@ -15,7 +15,7 @@ import me.richard.note.model.Weather;
 
 
 /**
- * Created by wangshouheng on 2017/8/12. */
+ * Created by Richard on 2017/8/12. */
 public enum ModelType {
     NONE(0, Model.class, R.string.model_name_none),
     NOTE(3, Note.class, R.string.model_name_note),

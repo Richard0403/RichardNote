@@ -15,7 +15,7 @@ import me.richard.note.model.enums.Operation;
 import me.richard.note.provider.TimelineStore;
 
 /**
- * Created by wangshouheng on 2017/11/3.*/
+ * Created by Richard on 2017/11/3.*/
 public class TimelineHelper {
 
     public static <T extends Model> void addTimeLine(T model, Operation operation) {

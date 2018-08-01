@@ -6,7 +6,7 @@ import me.richard.note.provider.annotation.Table;
 import me.richard.note.provider.schema.CategorySchema;
 
 /**
- * Created by wangshouheng on 2017/3/31.*/
+ * Created by Richard on 2017/3/31.*/
 @Table(name = CategorySchema.TABLE_NAME)
 public class Category extends Model implements Selectable {
 

@@ -16,7 +16,7 @@ import me.richard.note.R;
 import me.richard.note.util.ColorUtils;
 
 /**
- * Created by wangshouheng on 2017/6/30. */
+ * Created by Richard on 2017/6/30. */
 public class LinkInputDialog extends DialogFragment {
 
     private OnConfirmClickListener onConfirmClickListener;

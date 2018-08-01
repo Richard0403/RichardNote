@@ -23,7 +23,7 @@ import me.richard.note.widget.tools.CustomItemAnimator;
 import me.richard.note.widget.tools.DividerItemDecoration;
 
 /**
- * Created by wangshouheng on 2017/10/5.*/
+ * Created by Richard on 2017/10/5.*/
 public abstract class BasePickerDialog<T extends Model & Selectable> extends DialogFragment {
 
     private ModelsPickerAdapter<T> modelsPickerAdapter;

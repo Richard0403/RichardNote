@@ -15,7 +15,7 @@ import me.richard.note.repository.CategoryRepository;
 import me.richard.note.util.LogUtils;
 
 /**
- * Created by WangShouheng on 2018/3/13.*/
+ * Created by Richard on 2018/3/13.*/
 public class CategoryViewModel extends BaseViewModel<Category> {
 
     public final static String CATEGORY_SPLIT = ",";

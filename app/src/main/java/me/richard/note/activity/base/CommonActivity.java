@@ -11,9 +11,6 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
 import com.afollestad.materialdialogs.color.ColorChooserDialog;
-import com.crashlytics.android.Crashlytics;
-
-import io.fabric.sdk.android.Fabric;
 import me.richard.note.util.ActivityUtils;
 
 /**
@@ -35,7 +32,7 @@ public abstract class CommonActivity<T extends ViewDataBinding> extends ThemedAc
         super.onCreate(savedInstanceState);
         ActivityUtils.addActivity(this);
 
-        Fabric.with(this, new Crashlytics());
+//        Fabric.with(this, new Crashlytics());
 
         if (getLayoutResId() <= 0 ) {
             throw new AssertionError("Subclass must provide a valid layout resource id");

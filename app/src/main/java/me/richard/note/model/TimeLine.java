@@ -8,7 +8,7 @@ import me.richard.note.provider.annotation.Table;
 import me.richard.note.provider.schema.TimelineSchema;
 
 /**
- * Created by wangshouheng on 2017/8/13. */
+ * Created by Richard on 2017/8/13. */
 @Table(name = TimelineSchema.TABLE_NAME)
 public class TimeLine extends Model {
 

@@ -41,7 +41,7 @@ import me.richard.note.viewmodel.CategoryViewModel;
 import me.richard.note.widget.FlowLayout;
 
 /**
- * Created by wangshouheng on 2017/9/3.*/
+ * Created by Richard on 2017/9/3.*/
 public abstract class BaseModelFragment<T extends Model, V extends ViewDataBinding> extends BaseFragment<V> {
 
     // region edit structure

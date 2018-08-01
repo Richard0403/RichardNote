@@ -1,7 +1,7 @@
 package me.richard.note.widget.tools;
 
 /**
- * Created by wangshouheng on 2017/3/31.*/
+ * Created by Richard on 2017/3/31.*/
 public interface IItemTouchHelperAdapter {
 
     /**

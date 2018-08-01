@@ -8,7 +8,7 @@ import me.richard.note.model.Notebook;
 import me.richard.note.util.ColorUtils;
 
 /**
- * Created by wangshouheng on 2017/10/5.*/
+ * Created by Richard on 2017/10/5.*/
 public class NotebookPickerStrategy implements ModelsPickerStrategy<Notebook> {
 
     private Context context;

@@ -11,7 +11,7 @@ import me.richard.note.provider.annotation.Column;
 import me.richard.note.provider.annotation.Table;
 
 /**
- * Created by wangshouheng on 2017/8/18. */
+ * Created by Richard on 2017/8/18. */
 @Table(name = "gt_mind_snagging")
 public class MindSnagging extends Model implements Parcelable {
 

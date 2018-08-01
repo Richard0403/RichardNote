@@ -10,7 +10,7 @@ import me.richard.note.util.ColorUtils;
 
 
 /**
- * Created by wangshouheng on 2017/12/5.*/
+ * Created by Richard on 2017/12/5.*/
 public class Divider extends View {
 
     public Divider(Context context) {

@@ -16,7 +16,7 @@ import me.richard.note.util.ColorUtils;
 import me.richard.note.widget.CircleImageView;
 
 /**
- * Created by wangshouheng on 2017/8/6. */
+ * Created by Richard on 2017/8/6. */
 public class ThemesAdapter extends BaseQuickAdapter<Colorful.ThemeColor, BaseViewHolder> {
 
     private Context context;

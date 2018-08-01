@@ -23,7 +23,7 @@ import me.richard.note.util.UserUtil;
 
 
 /**
- * Created by wangshouheng on 2017/8/18. */
+ * Created by Richard on 2017/8/18. */
 public abstract class BaseStore<T extends Model> {
 
     private PalmDB mPalmDatabase = null;

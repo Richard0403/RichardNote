@@ -14,7 +14,7 @@ import me.richard.note.provider.schema.TimelineSchema;
 /**
  * 时间线的数据库方法
  *
- * Created by wangshouheng on 2017/8/13. */
+ * Created by Richard on 2017/8/13. */
 public class TimelineStore extends BaseStore<TimeLine> {
 
     private static TimelineStore sInstance = null;

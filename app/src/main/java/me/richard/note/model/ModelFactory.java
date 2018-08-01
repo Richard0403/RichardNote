@@ -21,7 +21,7 @@ import me.richard.note.util.UserUtil;
 import me.richard.note.viewmodel.CategoryViewModel;
 
 /**
- * Created by wangshouheng on 2017/11/17. */
+ * Created by Richard on 2017/11/17. */
 public class ModelFactory {
 
     private static long getLongCode() {

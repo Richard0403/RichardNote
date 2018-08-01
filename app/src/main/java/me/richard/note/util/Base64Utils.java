@@ -3,7 +3,7 @@ package me.richard.note.util;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created by wangshouheng on 2017/2/28.*/
+ * Created by Richard on 2017/2/28.*/
 public class Base64Utils {
 
     private static char[] base64EncodeChars = new char[]{

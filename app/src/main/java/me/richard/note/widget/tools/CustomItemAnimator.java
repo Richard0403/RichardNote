@@ -17,7 +17,7 @@ import me.richard.note.util.PalmUtils;
 import me.richard.note.util.preferences.UserPreferences;
 
 /**
- * Created by wangshouheng on 2017/4/1.*/
+ * Created by Richard on 2017/4/1.*/
 public class CustomItemAnimator extends DefaultItemAnimator {
 
     private static final OvershootInterpolator OVERSHOOT_INTERPOLATOR = new OvershootInterpolator(4);

@@ -16,7 +16,7 @@ import me.richard.note.databinding.WidgetEmptyViewBinding;
 import me.richard.note.util.ColorUtils;
 
 /**
- * Created by wangshouheng on 2017/8/9. */
+ * Created by Richard on 2017/8/9. */
 public class EmptyView extends LinearLayout {
 
     private boolean tintDrawable;

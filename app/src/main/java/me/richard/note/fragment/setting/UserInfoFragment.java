@@ -25,7 +25,7 @@ import me.richard.note.util.UserUtil;
 import me.richard.note.viewmodel.StatisticViewModel;
 
 /**
- * Created by wangshouheng on 2017/8/11. */
+ * Created by Richard on 2017/8/11. */
 public class UserInfoFragment extends CommonFragment<FragmentUserInfoBinding> {
 
     private final static int REQUEST_FOR_LOGIN = 50000;

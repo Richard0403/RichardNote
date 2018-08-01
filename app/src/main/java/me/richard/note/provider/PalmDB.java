@@ -22,7 +22,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  * 8. Extends {@link me.richard.note.repository.BaseRepository} to add repository.
  * 9. Most import modify {@link PalmDB#VERSION}.
  *
- * Created by wangshouheng on 2017/3/13. */
+ * Created by Richard on 2017/3/13. */
 public class PalmDB extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "NotePal.db";

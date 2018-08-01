@@ -3,7 +3,7 @@ package me.richard.note.config;
 /**
  * 文字的长度的设置
  *
- * Created by wangshouheng on 2017/10/7. */
+ * Created by Richard on 2017/10/7. */
 public enum TextLength {
     TITLE_TEXT_LENGTH(120),
     SUB_CONTENT_LENGTH(255),

@@ -5,7 +5,7 @@ import android.support.annotation.DrawableRes;
 import me.richard.note.R;
 
 /**
- * Created by wangshouheng on 2017/8/12. */
+ * Created by Richard on 2017/8/12. */
 public enum Portrait {
     FOLDER(1, R.drawable.ic_folder_black_24dp),
     LOCK(2, R.drawable.ic_lock),

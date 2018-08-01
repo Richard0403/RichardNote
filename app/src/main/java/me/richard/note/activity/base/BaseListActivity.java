@@ -22,7 +22,7 @@ import me.richard.note.util.FragmentHelper;
 
 
 /**
- * Created by wangshouheng on 2017/10/10.*/
+ * Created by Richard on 2017/10/10.*/
 public abstract class BaseListActivity extends CommonActivity<ActivityListBaseWithDrawerBinding> implements
         NotesFragment.OnNotesInteractListener,
         CategoriesFragment.OnCategoriesInteractListener {

@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
+//apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -11,6 +11,12 @@ android {
         versionName "1.1.5"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
     }
     signingConfigs {
         release {}
@@ -22,9 +28,18 @@ android {
             shrinkResources true // enable shrink resources
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        applicationVariants.all { variant ->
-            variant.outputs.all { output ->
-                outputFileName = defaultConfig.applicationId + "-" + variant.baseName + "-" + defaultConfig.versionName + "-" + defaultConfig.versionCode + ".apk";
+//        applicationVariants.all { variant ->
+//            variant.outputs.all { output ->
+//                outputFileName = defaultConfig.applicationId + "-" + variant.baseName + "-" + defaultConfig.versionName + "-" + defaultConfig.versionCode + ".apk";
+//            }
+//        }
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                if (variant.buildType.name == "release") {
+                    outputFileName = "Note_V${defaultConfig.versionName}_${releaseTime()}_release.apk"
+                } else if (variant.buildType.name == "debug") {
+                    outputFileName = "Note_V${defaultConfig.versionName}_${releaseTime()}_debug.apk"
+                }
             }
         }
     }
@@ -47,14 +62,16 @@ android {
         abortOnError false
     }
     flavorDimensions "default"
-    productFlavors {
-        dev {}
-        alpha {}
-        beta {}
-        prod {}
-    }
+//    productFlavors {
+//        dev {}
+//        alpha {}
+//        beta {}
+//        prod {}
+//    }
 }
-
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd-HH-mm")
+}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
@@ -103,9 +120,9 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
     implementation 'com.github.lecho:hellocharts-android:v1.5.8'
     implementation 'com.andrognito.pinlockview:pinlockview:2.1.0'
-    compile('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') {
-        transitive = true
-    }
+//    compile('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') {
+//        transitive = true
+//    }
     implementation 'com.facebook.stetho:stetho:1.5.0'
     implementation 'joda-time:joda-time:2.9.9'
     implementation 'com.github.Kennyc1012:BottomSheet:2.4.0'

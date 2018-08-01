@@ -24,7 +24,7 @@ import me.richard.note.widget.CircleImageView;
 import me.richard.note.widget.WatcherTextView;
 
 /**
- * Created by wangshouheng on 2017/4/2.*/
+ * Created by Richard on 2017/4/2.*/
 public class CategoryEditDialog extends DialogFragment {
 
     private OnConfirmCategoryEditListener onConfirmCategoryEditListener;

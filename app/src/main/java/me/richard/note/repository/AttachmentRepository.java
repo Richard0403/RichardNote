@@ -11,7 +11,7 @@ import me.richard.note.provider.AttachmentsStore;
 import me.richard.note.provider.BaseStore;
 
 /**
- * Created by WangShouheng on 2018/3/13.*/
+ * Created by Richard on 2018/3/13.*/
 public class AttachmentRepository extends BaseRepository<Attachment> {
 
     @Override

@@ -17,7 +17,7 @@ import me.richard.note.util.ColorUtils;
 import me.richard.note.util.TimeUtils;
 
 /**
- * Created by wangshouheng on 2017/5/8.*/
+ * Created by Richard on 2017/5/8.*/
 public class SearchItemsAdapter extends RecyclerView.Adapter<SearchItemsAdapter.ViewHolder>{
 
     private List searchResults = new LinkedList();

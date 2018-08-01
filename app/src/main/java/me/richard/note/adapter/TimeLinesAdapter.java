@@ -19,7 +19,7 @@ import me.richard.note.widget.CircleImageView;
 import me.richard.note.widget.Timeline;
 
 /**
- * Created by wangshouheng on 2017/8/19. */
+ * Created by Richard on 2017/8/19. */
 public class TimeLinesAdapter extends BaseQuickAdapter<TimeLine, BaseViewHolder> {
 
     private Context context;

@@ -17,7 +17,7 @@ import me.richard.note.model.Selectable;
 import me.richard.note.util.ColorUtils;
 
 /**
- * Created by wangshouheng on 2017/10/5.*/
+ * Created by Richard on 2017/10/5.*/
 public class ModelsPickerAdapter<T extends Model & Selectable> extends BaseQuickAdapter<T, BaseViewHolder> {
 
     private int selectedColor = -1;

@@ -7,7 +7,7 @@ import me.richard.note.provider.annotation.Table;
 import me.richard.note.provider.schema.LocationSchema;
 
 /**
- * Created by wangshouheng on 2017/4/6.*/
+ * Created by Richard on 2017/4/6.*/
 @Table(name = LocationSchema.TABLE_NAME)
 public class Location extends Model {
 

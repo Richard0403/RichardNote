@@ -2,7 +2,7 @@ package me.richard.note.model;
 
 /**
  * 已登录的账号的信息
- * Created by wangshouheng on 2017/5/25.
+ * Created by Richard on 2017/5/25.
  */
 public class LoginedUser {
 

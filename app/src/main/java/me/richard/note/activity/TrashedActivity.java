@@ -12,7 +12,7 @@ import me.richard.note.model.enums.Status;
 import me.richard.note.util.FragmentHelper;
 
 /**
- * Created by wangshouheng on 2017/10/10.*/
+ * Created by Richard on 2017/10/10.*/
 public class TrashedActivity extends BaseListActivity {
 
     @Override

@@ -20,7 +20,7 @@ import me.richard.note.provider.schema.NotebookSchema;
 
 
 /**
- * Created by wangshouheng on 2017/8/19. */
+ * Created by Richard on 2017/8/19. */
 public class NotebookStore extends BaseStore<Notebook> {
 
     private static NotebookStore sInstance = null;

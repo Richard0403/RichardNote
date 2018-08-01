@@ -5,7 +5,7 @@ import android.support.annotation.StringRes;
 import me.richard.note.R;
 
 /**
- * Created by wangshouheng on 2017/8/13.*/
+ * Created by Richard on 2017/8/13.*/
 public enum Operation {
     NONE(0, R.string.operation_none),
     ADD(1, R.string.operation_added),

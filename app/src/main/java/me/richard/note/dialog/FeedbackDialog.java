@@ -30,7 +30,7 @@ import me.richard.note.util.ToastUtils;
 import me.richard.note.widget.WatcherTextView;
 
 /**
- * Created by wangshouheng on 2017/12/3.*/
+ * Created by Richard on 2017/12/3.*/
 @SuppressLint("ValidFragment")
 public class FeedbackDialog extends DialogFragment implements AdapterView.OnItemSelectedListener {
 

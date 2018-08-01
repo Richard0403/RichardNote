@@ -3,7 +3,7 @@ package me.richard.note.model;
 import me.richard.note.model.enums.FeedbackType;
 
 /**
- * Created by wangshouheng on 2017/12/3.*/
+ * Created by Richard on 2017/12/3.*/
 public class Feedback extends Model {
 
     private String email;

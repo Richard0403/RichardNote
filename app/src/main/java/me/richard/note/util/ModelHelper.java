@@ -35,7 +35,7 @@ import me.richard.note.viewmodel.CategoryViewModel;
 import me.richard.note.widget.FlowLayout;
 
 /**
- * Created by wangshouheng on 2017/11/4.*/
+ * Created by Richard on 2017/11/4.*/
 public class ModelHelper {
 
     @Nullable

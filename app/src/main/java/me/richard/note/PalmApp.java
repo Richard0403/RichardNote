@@ -49,7 +49,7 @@ import me.richard.note.model.Model;
  * 3.打开日记的时候先从OneDrive上面检查备份信息；
  * 4.备份的文件的名称需要改；
  *
- * Created by wangshouheng on 2017/2/26. */
+ * Created by Richard on 2017/2/26. */
 public class PalmApp extends Application {
 
     private static PalmApp mInstance;

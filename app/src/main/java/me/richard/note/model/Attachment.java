@@ -14,7 +14,7 @@ import me.richard.note.provider.schema.AttachmentSchema;
 
 
 /**
- * Created by wangshouheng on 2017/4/6.*/
+ * Created by Richard on 2017/4/6.*/
 @Table(name = AttachmentSchema.TABLE_NAME)
 public class Attachment extends Model implements Parcelable {
 

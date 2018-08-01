@@ -102,9 +102,9 @@
         <activity android:name="me.richard.note.activity.LoginActivity" />
         <activity android:name="me.richard.note.activity.SearchActivity" />
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="aa14224ea2102fef301d211dac552635f37b1f9e" />
+        <!--<meta-data-->
+            <!--android:name="io.fabric.ApiKey"-->
+            <!--android:value="aa14224ea2102fef301d211dac552635f37b1f9e" />-->
 
         <!-- ================Baidu Map API START================ -->
         <service

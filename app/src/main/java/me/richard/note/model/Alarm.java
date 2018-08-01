@@ -15,7 +15,7 @@ import me.richard.note.util.TimeUtils;
 
 
 /**
- * Created by wangshouheng on 2017/4/18. */
+ * Created by Richard on 2017/4/18. */
 @Table(name = AlarmSchema.TABLE_NAME)
 public class Alarm extends Model {
 

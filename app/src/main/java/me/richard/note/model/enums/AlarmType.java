@@ -1,7 +1,7 @@
 package me.richard.note.model.enums;
 
 /**
- * Created by wangshouheng on 2017/4/30. */
+ * Created by Richard on 2017/4/30. */
 public enum AlarmType {
     BAD_BOY(0),
     SPECIFIED_DATE(1),

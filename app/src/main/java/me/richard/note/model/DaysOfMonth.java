@@ -3,7 +3,7 @@ package me.richard.note.model;
 import java.util.Calendar;
 
 /**
- * Created by wangshouheng on 2017/4/23.*/
+ * Created by Richard on 2017/4/23.*/
 public class DaysOfMonth {
 
     private int dayOfMonth;

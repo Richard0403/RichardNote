@@ -6,7 +6,7 @@ import me.richard.note.R;
 
 
 /**
- * Created by wangshouheng on 2017/12/3.*/
+ * Created by Richard on 2017/12/3.*/
 public enum FeedbackType {
     ABRUPT_CRASH(0, R.string.feedback_abrupt_crash),
     FUNCTION_IMPROVEMENT(1, R.string.feedback_function_improvement),

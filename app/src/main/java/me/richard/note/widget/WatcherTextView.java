@@ -16,7 +16,7 @@ import me.richard.note.R;
 import me.richard.note.util.ColorUtils;
 
 /**
- * Created by wangshouheng on 2017/8/27.*/
+ * Created by Richard on 2017/8/27.*/
 public class WatcherTextView extends android.support.v7.widget.AppCompatTextView {
 
     private Integer maxLength;

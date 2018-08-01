@@ -14,7 +14,7 @@ import me.richard.note.util.ColorUtils;
 import me.richard.note.widget.EmptyView;
 
 /**
- * Created by wangshouheng on 2017/10/5.*/
+ * Created by Richard on 2017/10/5.*/
 public class NotebookPickerDialog extends BasePickerDialog<Notebook> {
 
     public static NotebookPickerDialog newInstance() {
