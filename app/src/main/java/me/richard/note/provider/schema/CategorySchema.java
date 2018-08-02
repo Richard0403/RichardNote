@@ -1,7 +1,7 @@
 package me.richard.note.provider.schema;
 
 /**
- * Created by Wang Shouheng on 2018/2/14.*/
+ * Created by richard on 2018/2/14.*/
 public interface CategorySchema extends BaseSchema {
     String TABLE_NAME = "gt_category";
     String NAME = "name";

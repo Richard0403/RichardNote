@@ -8,7 +8,7 @@ import static me.richard.note.model.data.Status.LOADING;
 import static me.richard.note.model.data.Status.SUCCESS;
 
 /**
- * Created by wang shouheng on 2018/3/13. */
+ * Created by richard on 2018/3/13. */
 public class Resource<T> {
 
     @NonNull

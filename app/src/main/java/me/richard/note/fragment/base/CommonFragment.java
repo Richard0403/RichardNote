@@ -16,7 +16,7 @@ import me.richard.note.R;
 import me.richard.note.util.ColorUtils;
 
 /**
- * Created by wang shouheng on 2017/12/23. */
+ * Created by richard on 2017/12/23. */
 public abstract class CommonFragment<T extends ViewDataBinding> extends Fragment {
 
     private T binding;

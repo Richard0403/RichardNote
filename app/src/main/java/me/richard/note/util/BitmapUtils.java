@@ -31,7 +31,7 @@ import java.io.InputStream;
 import me.richard.note.R;
 
 /**
- * Created by wang shouheng on 2018/1/25.*/
+ * Created by richard on 2018/1/25.*/
 public class BitmapUtils {
 
     public static Bitmap getThumbnail(Context mContext, Uri uri, int reqWidth, int reqHeight) {

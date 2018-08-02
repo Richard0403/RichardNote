@@ -14,7 +14,7 @@ import com.afollestad.materialdialogs.color.ColorChooserDialog;
 import me.richard.note.util.ActivityUtils;
 
 /**
- * Created by wang shouheng on 2017/12/21.*/
+ * Created by richard on 2017/12/21.*/
 @SuppressLint("Registered")
 public abstract class CommonActivity<T extends ViewDataBinding> extends ThemedActivity implements
         ColorChooserDialog.ColorCallback {

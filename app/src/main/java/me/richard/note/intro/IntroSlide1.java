@@ -7,7 +7,7 @@ import me.richard.note.R;
 
 
 /**
- * Created by Wang Shouheng on 2017/12/6. */
+ * Created by richard on 2017/12/6. */
 public class IntroSlide1 extends IntroFragment {
 
     @Override

@@ -11,7 +11,7 @@ import android.support.v4.content.ContextCompat;
 
 
 /**
- * Created by wang shouheng on 2017/12/5.*/
+ * Created by richard on 2017/12/5.*/
 public class PermissionUtils {
 
     public static <T extends BaseActivity> void checkStoragePermission(@NonNull T activity, OnGetPermissionCallback callback) {

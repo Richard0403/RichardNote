@@ -27,7 +27,7 @@ import me.richard.note.util.TimeUtils;
 import me.richard.note.viewmodel.StatisticViewModel;
 
 /**
- * Created by wang shouheng on 2018/1/19.*/
+ * Created by richard on 2018/1/19.*/
 public class StatisticsHelper {
 
     /**

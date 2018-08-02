@@ -6,7 +6,7 @@ import me.richard.note.provider.PalmDB;
 import me.richard.note.util.LogUtils;
 
 /**
- * Created by wang shouheng on 2018/2/6.*/
+ * Created by richard on 2018/2/6.*/
 public class OpenHelperManager {
     @SuppressLint("StaticFieldLeak")
     private static boolean isClosed = false;

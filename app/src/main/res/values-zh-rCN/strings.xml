@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">写点日记</string>
+    <string name="app_name">初心笔记</string>
 
     <!--region Common-->
     <string name="text_add_more">添加&#8230;</string>
@@ -605,5 +605,6 @@
     <string name="note_count">你写了 %1$d 篇日记</string>
     <string name="disp_picture">【图片】</string>
     <string name="disp_file">【文件】}</string>
+    <string name="thanks_person">感谢你对 %s 的支持</string>
     <!--endregion-->
 </resources>

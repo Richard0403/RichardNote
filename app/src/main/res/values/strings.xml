@@ -423,6 +423,8 @@
     <string name="help_development">Associations</string>
     <string name="translation">Translation</string>
     <string name="translate_to_other_languages">Translate %s into other languages</string>
+
+
     <string name="rating">Rating</string>
     <string name="give_good_rating_if_you_like">Give us a good rating if you like %s</string>
     <string name="thanks">Thanks</string>
@@ -606,5 +608,6 @@
     <string name="note_count">You have %1$d notes</string>
     <string name="disp_picture">【picture】</string>
     <string name="disp_file">【file】</string>
+    <string name="thanks_person">Thanks for your support to %s</string>
     <!--endregion-->
 </resources>

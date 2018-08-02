@@ -95,10 +95,10 @@
                         android:layout_height="1dp"/>
 
                     <me.richard.note.widget.themed.CardTitleView
-                        android:id="@+id/ctv_translation"
+                        android:id="@+id/ctv_thanks"
                         app:card_icon="@drawable/ic_assistant_photo_black_24dp"
-                        app:card_title="@string/translation"
-                        app:card_sub_title="@string/translate_to_other_languages"
+                        app:card_title="@string/thanks"
+                        app:card_sub_title="@string/thanks_person"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
 

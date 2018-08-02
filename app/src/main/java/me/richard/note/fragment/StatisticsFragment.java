@@ -22,7 +22,7 @@ import me.richard.note.util.ToastUtils;
 import me.richard.note.viewmodel.StatisticViewModel;
 
 /**
- * Created by wang shouheng on 2018/1/19. */
+ * Created by richard on 2018/1/19. */
 public class StatisticsFragment extends BaseFragment<FragmentStatisticsBinding> {
 
     private StatisticViewModel statisticViewModel;

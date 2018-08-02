@@ -16,7 +16,7 @@ import me.richard.note.widget.CircleImageView;
 import me.richard.note.widget.tools.IItemTouchHelperAdapter;
 
 /**
- * Created by Wang Shouheng on 2018/2/14. */
+ * Created by richard on 2018/2/14. */
 public class CategoriesAdapter extends BaseQuickAdapter<Category, BaseViewHolder> implements IItemTouchHelperAdapter {
 
     private Category mJustDeletedToDoItem;

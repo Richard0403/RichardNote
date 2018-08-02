@@ -29,7 +29,7 @@ import me.richard.note.util.preferences.PersistPreferences;
 import top.zibin.luban.Luban;
 
 /**
- * Created by Wang Shouheng on 2017/12/30.*/
+ * Created by richard on 2017/12/30.*/
 public class AttachmentHelper {
 
     private static String filePath;

@@ -13,7 +13,7 @@ import java.io.Serializable;
 import me.richard.note.R;
 
 /**
- * Created by wang shouheng on 2018/1/3.*/
+ * Created by richard on 2018/1/3.*/
 public class OpenResolver extends DialogFragment {
 
     private OnResolverTypeClickListener onResolverTypeClickListener;

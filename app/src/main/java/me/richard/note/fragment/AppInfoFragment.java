@@ -44,8 +44,8 @@ public class AppInfoFragment extends BaseFragment<FragmentAppInfoBinding> {
         String verName =  "V" + BuildConfig.VERSION_NAME;
         getBinding().tvVersionName.setText(verName);
 
-        getBinding().ctvTranslation.setOnCardTitleClickListener(() -> IntentUtils.openGithubProject(getActivity()));
-        getBinding().ctvTranslation.setSubTitle(String.format(getString(R.string.translate_to_other_languages), getString(R.string.app_name)));
+//        getBinding().ctvThanks.setOnCardTitleClickListener(() -> IntentUtils.openGithubProject(getActivity()));
+        getBinding().ctvThanks.setSubTitle(String.format(getString(R.string.thanks_person), getString(R.string.app_name)));
 
         getBinding().ctvRating.setOnCardTitleClickListener(() -> IntentUtils.openInMarket(getActivity()));
         getBinding().ctvRating.setSubTitle(String.format(getString(R.string.give_good_rating_if_you_like), getString(R.string.app_name)));

@@ -10,7 +10,7 @@ import me.richard.note.R;
 import me.richard.note.util.preferences.UserPreferences;
 
 /**
- * Created by wang shouheng on 2017/12/23.*/
+ * Created by richard on 2017/12/23.*/
 public class FragmentHelper {
 
     public static void replace(AppCompatActivity activity,

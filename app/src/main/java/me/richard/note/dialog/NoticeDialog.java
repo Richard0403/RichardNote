@@ -14,7 +14,7 @@ import me.richard.note.databinding.DialogNoticeBinding;
 import me.richard.note.util.IntentUtils;
 
 /**
- * Created by wang shouheng on 2018/1/25. */
+ * Created by richard on 2018/1/25. */
 public class NoticeDialog extends DialogFragment {
 
     private DialogNoticeBinding binding;

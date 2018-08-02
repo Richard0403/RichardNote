@@ -14,7 +14,7 @@ import me.richard.note.databinding.WidgetCardTitleViewBinding;
 import me.richard.note.util.ColorUtils;
 
 /**
- * Created by wang shouheng on 2018/2/23.*/
+ * Created by richard on 2018/2/23.*/
 public class CardTitleView extends LinearLayout {
 
     private WidgetCardTitleViewBinding binding;

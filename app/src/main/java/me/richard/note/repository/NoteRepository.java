@@ -23,7 +23,7 @@ import me.richard.note.provider.helper.NotebookHelper;
 import me.richard.note.provider.helper.TrashHelper;
 
 /**
- * Created by wang shouheng on 2018/3/13.*/
+ * Created by richard on 2018/3/13.*/
 public class NoteRepository extends BaseRepository<Note> {
 
     @Override

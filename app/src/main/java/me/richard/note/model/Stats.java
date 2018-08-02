@@ -3,7 +3,7 @@ package me.richard.note.model;
 import java.util.List;
 
 /**
- * Created by wang shouheng on 2018/1/19.*/
+ * Created by richard on 2018/1/19.*/
 public class Stats {
 
     // region notes stats

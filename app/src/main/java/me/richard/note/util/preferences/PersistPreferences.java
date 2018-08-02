@@ -8,7 +8,7 @@ import me.richard.note.PalmApp;
 import me.richard.note.R;
 
 /**
- * Created by Wang Shouheng on 2017/12/5. */
+ * Created by richard on 2017/12/5. */
 public class PersistPreferences extends BasePreferences {
 
     private static PersistPreferences sInstance;

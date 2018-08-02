@@ -27,7 +27,7 @@ import me.richard.note.util.tools.Invoker;
 import me.richard.note.util.tools.Message;
 
 /**
- * Created by wang shouheng on 2017/12/29.*/
+ * Created by richard on 2017/12/29.*/
 public abstract class BaseFragment<V extends ViewDataBinding> extends CommonFragment<V>
         implements OnAttachingFileListener  {
 

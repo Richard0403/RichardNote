@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment;
 import me.richard.note.PalmApp;
 
 /**
- * Created by wang shouheng on 2017/12/23.*/
+ * Created by richard on 2017/12/23.*/
 public class PalmUtils {
 
     /**

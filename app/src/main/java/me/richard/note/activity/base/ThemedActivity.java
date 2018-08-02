@@ -20,7 +20,7 @@ import me.richard.note.util.ViewUtils;
 import me.richard.note.util.preferences.ThemePreferences;
 
 /**
- * Created by wang shouheng on 2017/12/21.*/
+ * Created by richard on 2017/12/21.*/
 @SuppressLint("Registered")
 public class ThemedActivity extends ColorfulActivity {
 

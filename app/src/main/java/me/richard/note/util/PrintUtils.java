@@ -7,7 +7,7 @@ import android.webkit.WebView;
 import me.richard.note.model.Note;
 
 /**
- * Created by wang shouheng on 2017/12/28.*/
+ * Created by richard on 2017/12/28.*/
 public class PrintUtils {
 
     public static void print(Context ctx, WebView webView, Note note) {

@@ -27,7 +27,7 @@ import me.richard.note.util.preferences.NotePreferences;
 import me.richard.note.widget.tools.BubbleTextGetter;
 
 /**
- * Created by wang shouheng on 2017/12/23.*/
+ * Created by richard on 2017/12/23.*/
 public class NotesAdapter extends BaseMultiItemQuickAdapter<NotesAdapter.MultiItem, BaseViewHolder> implements
         BubbleTextGetter {
 

@@ -12,7 +12,7 @@ import me.richard.note.model.enums.Status;
 import me.richard.note.provider.BaseStore;
 
 /**
- * Created by wang shouheng on 2018/3/13. */
+ * Created by richard on 2018/3/13. */
 public abstract class BaseRepository<T extends Model> {
 
     protected abstract BaseStore<T> getStore();

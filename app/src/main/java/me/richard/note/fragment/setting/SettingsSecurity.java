@@ -25,7 +25,7 @@ import me.richard.note.util.ToastUtils;
 import me.richard.note.util.preferences.LockPreferences;
 
 /**
- * Created by wang shouheng on 2018/1/12. */
+ * Created by richard on 2018/1/12. */
 public class SettingsSecurity extends BaseFragment {
 
     private final static int REQUEST_SET_PASSWORD = 0x0010;

@@ -10,7 +10,7 @@ import me.richard.note.R;
 import me.richard.note.widget.desktop.ListWidgetProvider;
 
 /**
- * Created by wang shouheng on 2018/1/25.*/
+ * Created by richard on 2018/1/25.*/
 public class AppWidgetUtils {
 
     public static void notifyAppWidgets(Context context) {

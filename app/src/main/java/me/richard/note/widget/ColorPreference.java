@@ -11,7 +11,7 @@ import me.richard.note.R;
 import me.richard.note.util.ColorUtils;
 
 /**
- * Created by wang shouheng on 2017/12/23. */
+ * Created by richard on 2017/12/23. */
 public class ColorPreference extends Preference {
 
     private int value;

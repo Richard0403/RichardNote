@@ -38,7 +38,7 @@ import me.richard.note.util.enums.SyncTimeInterval;
 import me.richard.note.util.preferences.SyncPreferences;
 
 /**
- * Created by wang shouheng on 2018/1/5.*/
+ * Created by richard on 2018/1/5.*/
 public class SettingsBackup extends BaseFragment {
 
     private final int REQUEST_PICK_FOLDER = 0x000F;

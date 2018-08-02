@@ -13,7 +13,7 @@ import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 
 /**
- * Created by Wang Shouheng on 2017/12/5. */
+ * Created by richard on 2017/12/5. */
 public class ViewUtils {
 
     public static int getStatusBarHeight(Context context) {

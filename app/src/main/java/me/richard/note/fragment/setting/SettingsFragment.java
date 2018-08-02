@@ -19,7 +19,7 @@ import me.richard.note.util.IntentUtils;
 import me.richard.note.widget.ColorPreference;
 
 /**
- * Created by wang shouheng on 2017/12/21.*/
+ * Created by richard on 2017/12/21.*/
 public class SettingsFragment extends BaseFragment {
 
     private CheckBoxPreference isDarkTheme, coloredNavigationBar;
@@ -73,10 +73,10 @@ public class SettingsFragment extends BaseFragment {
             showIntroduction();
             return true;
         });
-        findPreference(R.string.key_support_develop).setOnPreferenceClickListener(preference -> {
-            NoticeDialog.newInstance().show(((CommonActivity) getActivity()).getSupportFragmentManager(), "Notice");
-            return true;
-        });
+//        findPreference(R.string.key_support_develop).setOnPreferenceClickListener(preference -> {
+//            NoticeDialog.newInstance().show(((CommonActivity) getActivity()).getSupportFragmentManager(), "Notice");
+//            return true;
+//        });
 
         primaryColor.setOnPreferenceClickListener(listener);
         accentColor.setOnPreferenceClickListener(listener);

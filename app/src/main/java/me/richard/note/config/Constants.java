@@ -63,8 +63,8 @@ public class Constants {
     public final static String TWITTER_PAGE = "https://twitter.com/ShouhengWang";
     public final static String WIKI = "https://github.com/Shouheng88/MarkNote/wiki";
 
-    public final static String DEVELOPER_EMAIL = "shouheng2015@gmail.com";
-    public final static String DEVELOPER_EMAIL_PREFIX = "【NotePal|%s】";
+    public final static String DEVELOPER_EMAIL = "985507966@qq.com";
+    public final static String DEVELOPER_EMAIL_PREFIX = "【RichardNote|%s】";
     public final static String DEVELOPER_EMAIL_EMAIL_PREFIX = "\nContact Email:";
 
     public final static String DEFAULT_USER_INFO_BG = "https://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2014/06/wallpaper_51.jpg";

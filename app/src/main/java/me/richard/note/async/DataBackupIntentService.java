@@ -26,7 +26,7 @@ import me.richard.note.util.LogUtils;
 import me.richard.note.util.NotificationsHelper;
 
 /**
- * Created by wang shouheng on 2018/1/5.*/
+ * Created by richard on 2018/1/5.*/
 public class DataBackupIntentService extends IntentService {
 
     public final static String INTENT_BACKUP_NAME = "backup_name";

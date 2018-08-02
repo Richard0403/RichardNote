@@ -1,7 +1,7 @@
 package me.richard.note.widget.desktop;
 
 /**
- * Created by wang shouheng on 2018/1/25.*/
+ * Created by richard on 2018/1/25.*/
 public enum ListWidgetType {
     NOTES_LIST(0),
     MINDS_LIST(1);

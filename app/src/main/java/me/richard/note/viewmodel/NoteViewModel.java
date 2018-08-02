@@ -35,7 +35,7 @@ import me.richard.note.util.ModelHelper;
 import me.richard.note.util.preferences.NotePreferences;
 
 /**
- * Created by wang shouheng on 2018/3/13.*/
+ * Created by richard on 2018/3/13.*/
 public class NoteViewModel extends BaseViewModel<Note> {
 
     @Override
