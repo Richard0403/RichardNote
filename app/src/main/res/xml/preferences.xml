@@ -65,21 +65,21 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/setting_help">
+    <!--<PreferenceCategory android:title="@string/setting_help">-->
 
-        <Preference
-            android:key="user_guide"
-            android:persistent="false"
-            android:title="@string/setting_online_user_guide"
-            android:summary="@string/setting_online_user_guide_sub"/>
+        <!--<Preference-->
+            <!--android:key="user_guide"-->
+            <!--android:persistent="false"-->
+            <!--android:title="@string/setting_online_user_guide"-->
+            <!--android:summary="@string/setting_online_user_guide_sub"/>-->
 
-        <Preference
-            android:key="user_intro"
-            android:persistent="false"
-            android:title="@string/setting_user_intro"
-            android:summary="@string/setting_user_intro_sub"/>
+        <!--<Preference-->
+            <!--android:key="user_intro"-->
+            <!--android:persistent="false"-->
+            <!--android:title="@string/setting_user_intro"-->
+            <!--android:summary="@string/setting_user_intro_sub"/>-->
 
-    </PreferenceCategory>
+    <!--</PreferenceCategory>-->
 
     <PreferenceCategory android:title="@string/setting_others">
 

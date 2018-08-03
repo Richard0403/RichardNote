@@ -12,9 +12,11 @@ import android.support.multidex.MultiDex;
 
 import com.facebook.stetho.Stetho;
 import com.squareup.leakcanary.LeakCanary;
+import com.tendcloud.tenddata.TCAgent;
 
 import org.polaric.colorful.Colorful;
 
+import me.richard.note.constants.Config;
 import me.richard.note.model.Model;
 
 /**
@@ -68,15 +70,21 @@ public class PalmApp extends Application {
 
         MultiDex.install(this);
 
+        initTalkData();
+
         Colorful.init(this);
 
-        /*
-         * Enable stetho only in debug mode. */
+        /* Enable stetho only in debug mode. */
         if (BuildConfig.DEBUG) {
             Stetho.initializeWithDefaults(this);
         }
-
         LeakCanary.install(this);
+    }
+
+    private void initTalkData() {
+        TCAgent.LOG_ON = BuildConfig.DEBUG;
+        TCAgent.init(this);
+        TCAgent.setReportUncaughtExceptions(true);
     }
 
     public static boolean isPasswordChecked() {

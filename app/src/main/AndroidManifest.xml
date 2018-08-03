@@ -24,6 +24,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS"  />
 
     <uses-feature
         android:name="android.hardware.touchscreen"
@@ -101,6 +102,16 @@
         <activity android:name="me.richard.note.activity.UserInfoActivity" />
         <activity android:name="me.richard.note.activity.LoginActivity" />
         <activity android:name="me.richard.note.activity.SearchActivity" />
+
+
+        <service android:name="com.talkingdata.sdk.TDAntiCheatingService"
+            android:process="com.talkingdata.sdk.TDAntiCheatingService">  <!--用户质量评估Service可以配置在主进程或者单独进程-->
+            <intent-filter>
+                <action android:name="com.talkingdata.sdk.TDAntiCheatingService" />
+            </intent-filter>
+        </service>
+        <meta-data android:name="TD_APP_ID" android:value="D3973B32FCA345639AFFBFC5EFB5460A" />
+        <meta-data android:name="TD_CHANNEL_ID" android:value="Your_channel_id" />
 
         <!--<meta-data-->
             <!--android:name="io.fabric.ApiKey"-->

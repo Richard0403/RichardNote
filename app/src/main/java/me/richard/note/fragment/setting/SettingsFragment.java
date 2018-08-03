@@ -65,14 +65,14 @@ public class SettingsFragment extends BaseFragment {
             showFeedbackEditor();
             return true;
         });
-        findPreference(R.string.key_user_guide).setOnPreferenceClickListener(preference -> {
-            IntentUtils.openWiki(getActivity());
-            return true;
-        });
-        findPreference(R.string.key_user_intro).setOnPreferenceClickListener(preference -> {
-            showIntroduction();
-            return true;
-        });
+//        findPreference(R.string.key_user_guide).setOnPreferenceClickListener(preference -> {
+//            IntentUtils.openWiki(getActivity());
+//            return true;
+//        });
+//        findPreference(R.string.key_user_intro).setOnPreferenceClickListener(preference -> {
+//            showIntroduction();
+//            return true;
+//        });
 //        findPreference(R.string.key_support_develop).setOnPreferenceClickListener(preference -> {
 //            NoticeDialog.newInstance().show(((CommonActivity) getActivity()).getSupportFragmentManager(), "Notice");
 //            return true;
