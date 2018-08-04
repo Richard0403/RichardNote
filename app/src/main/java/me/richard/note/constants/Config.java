@@ -16,6 +16,7 @@ public class Config {
 
         /** 登录 **/
         public static final String LOGIN = "tourist/login";
-
+        /** 获取版本号**/
+        public static final String VERSION = "version/getVersion";
     }
 }

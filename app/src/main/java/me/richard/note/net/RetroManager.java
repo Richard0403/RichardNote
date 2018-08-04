@@ -126,7 +126,7 @@ public class RetroManager {
 
             String token = "";
             try {
-//                token = AppCache.getUserEntity().getToken().getToken();
+//                token = PalmApp.getUserEntity().getToken().getToken();
             } catch (Exception e) {
                 LogUtils.i("用户未登录");
             }

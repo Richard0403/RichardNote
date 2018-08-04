@@ -51,6 +51,10 @@ public class PermissionUtils {
         checkPermission(activity, Manifest.permission.READ_CALENDAR, PermissionRequestCode.REQUEST_PERMISSION_CALENDAR, callback);
     }
 
+    public static <T extends BaseActivity> void checkIntallPermission(@NonNull T activity, OnGetPermissionCallback callback) {
+        checkPermission(activity, Manifest.permission.REQUEST_INSTALL_PACKAGES, PermissionRequestCode.REQUEST_INSTALL_PACKAGE, callback);
+    }
+
     private static <T extends BaseActivity> void checkPermission(@NonNull T activity, @NonNull String permission, int requestCode, OnGetPermissionCallback callback) {
         activity.setOnGetPermissionCallback(callback);
         if (ContextCompat.checkSelfPermission(activity, permission) != PackageManager.PERMISSION_GRANTED) {
@@ -82,6 +86,8 @@ public class PermissionUtils {
                 return context.getString(R.string.permission_camera_permission);
             case PermissionRequestCode.REQUEST_PERMISSION_CALENDAR:
                 return context.getString(R.string.permission_calendar_permission);
+            case PermissionRequestCode.REQUEST_INSTALL_PACKAGE:
+                return context.getString(R.string.permission_install_permission);
         }
         return context.getString(R.string.permission_default_permission_name);
     }

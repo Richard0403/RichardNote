@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#0dbbd2</color>
+    <color name="colorPrimaryDark">#ff16aec2</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="theme_color">@color/colorPrimaryDark</color>
+    <color name="theme_color_light">@color/colorPrimary</color>
     <!--region introduction-->
     <color name="intro_color_1">#222222</color>
     <color name="intro_color_2">#c52829</color>

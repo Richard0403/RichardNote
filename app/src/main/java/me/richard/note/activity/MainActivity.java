@@ -5,6 +5,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
@@ -30,6 +32,11 @@ import com.afollestad.materialdialogs.color.ColorChooserDialog;
 import com.bumptech.glide.Glide;
 import com.github.clans.fab.FloatingActionButton;
 
+import me.richard.note.dialog.*;
+import me.richard.note.net.HttpRequest;
+import me.richard.note.net.api.HomeService;
+import me.richard.note.net.entity.BaseEntity;
+import me.richard.note.net.entity.VersionEntity;
 import org.polaric.colorful.PermissionUtils;
 
 import java.util.Collections;
@@ -41,10 +48,6 @@ import me.richard.note.activity.base.CommonActivity;
 import me.richard.note.config.Constants;
 import me.richard.note.databinding.ActivityMainBinding;
 import me.richard.note.databinding.ActivityMainNavHeaderBinding;
-import me.richard.note.dialog.AttachmentPickerDialog;
-import me.richard.note.dialog.CategoryEditDialog;
-import me.richard.note.dialog.NotebookEditDialog;
-import me.richard.note.dialog.QuickNoteEditor;
 import me.richard.note.fragment.CategoriesFragment;
 import me.richard.note.fragment.NotesFragment;
 import me.richard.note.intro.IntroActivity;
@@ -171,7 +174,10 @@ public class MainActivity extends CommonActivity<ActivityMainBinding> implements
         initDrawerMenu();
 
         toNotesFragment(true);
+
+        checkUpdate();
     }
+
 
     private void initViewModels() {
         notebookViewModel = ViewModelProviders.of(this).get(NotebookViewModel.class);
@@ -856,6 +862,31 @@ public class MainActivity extends CommonActivity<ActivityMainBinding> implements
             case LOADING:
                 getBinding().sl.setVisibility(View.VISIBLE);
                 break;
+                default:
+                    break;
         }
+    }
+
+
+    private void checkUpdate() {
+        HttpRequest httpRequest = new HttpRequest<VersionEntity>() {
+            @Override
+            public String createJson() {
+                return super.createJson();
+            }
+            @Override
+            protected void onSuccess(VersionEntity version) {
+                super.onSuccess(version);
+                try {
+                    PackageManager packageManager = getPackageManager();
+                    PackageInfo packInfo = packageManager.getPackageInfo(getPackageName(), 0);
+                    if (version.getData().getVersionCode() > packInfo.versionCode && version.getData().isForce() != 0) {
+                        UpdateTipDialog down = new UpdateTipDialog(MainActivity.this, version.getData());
+                        down.show();
+                    }
+                }catch (Exception e){}
+            }
+        };
+        httpRequest.start(HomeService.class, "getVersion");
     }
 }

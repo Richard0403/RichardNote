@@ -17,4 +17,5 @@
     <string name="to_set">去设置</string>
     <string name="permission_denied_try_again_after_set">没有权限，请授予权限之后再次尝试。</string>
     <string name="permission_denied_try_again_after_set_given_permission">没有权限，请授予%s权限之后再次尝试。</string>
+    <string name="permission_install_permission">安装</string>
 </resources>

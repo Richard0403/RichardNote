@@ -10,18 +10,18 @@ public class AppConst {
 
     public static String getBaseUrl() {
         if (Config.IS_DEBUG) {
-            return TEST_SERVER;
+            return BASE_URL_TEST;
         }
         return BASE_URL;
     }
 
     public static String getAPIUrl(){
-        return getBaseUrl()+"uapi/";
+        return getBaseUrl()+"";
     }
     /**
      * 内部测试服务器地址
      */
-    private static final String BASE_URL_TEST = "http://192.168.0.200:8888/";
+    private static final String BASE_URL_TEST = "http://192.168.0.108:8080/";
     private static final String TEST_SERVER = "http://u.reader.myxiaoyou.net/";
     /**
      * 正式线上服务器地址

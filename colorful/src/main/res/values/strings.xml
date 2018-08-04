@@ -17,4 +17,5 @@
     <string name="to_set">to set</string>
     <string name="permission_denied_try_again_after_set">Permission denied. Please try again after grant the permission.</string>
     <string name="permission_denied_try_again_after_set_given_permission">Permission denied. Please try again after grant the %s permission.</string>
+    <string name="permission_install_permission">install</string>
 </resources>

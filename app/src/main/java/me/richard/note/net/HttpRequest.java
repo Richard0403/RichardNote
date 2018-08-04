@@ -183,7 +183,7 @@ public abstract class HttpRequest<T extends BaseEntity> {
         public void onError(Throwable e) {
             LogUtils.e(TAG, "error=========>" + e.getMessage());
             e.printStackTrace();
-//            TCAgent.onError(AppCache.getContext(), e);
+//            TCAgent.onError(PalmApp.getContext(), e);
             if (e instanceof HttpException) {
                 onFail(ERROR, "服务器错误", null);
             } else if (e instanceof UnknownHostException || e instanceof ConnectException) {
@@ -218,13 +218,13 @@ public abstract class HttpRequest<T extends BaseEntity> {
 //            intent.putExtra(App.EXTRA_DATA, (Serializable) t.getBonusListEvent());
 //            intent.putExtra(App.EXTRA_TYPE, App.LuckPackageReceiver.TYPE_OPEN_LIST);
 //            intent.setAction(App.RED_LUCK_UP);
-//            AppCache.getContext().sendBroadcast(intent);
+//            PalmApp.getContext().sendBroadcast(intent);
 //        }else if (t.getBonus() != null){
 //            Intent intent = new Intent();
 //            intent.putExtra(App.EXTRA_DATA, (Serializable) t.getBonus());
 //            intent.putExtra(App.EXTRA_TYPE, App.LuckPackageReceiver.TYPE_JUST_OPEN);
 //            intent.setAction(App.RED_LUCK_UP);
-//            AppCache.getContext().sendBroadcast(intent);
+//            PalmApp.getContext().sendBroadcast(intent);
 //        }
     }
 
