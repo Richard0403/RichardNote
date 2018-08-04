@@ -70,7 +70,7 @@ public class PalmApp extends Application {
 
         MultiDex.install(this);
 
-        initTalkData();
+        initTalkingData();
 
         Colorful.init(this);
 
@@ -81,7 +81,7 @@ public class PalmApp extends Application {
         LeakCanary.install(this);
     }
 
-    private void initTalkData() {
+    private void initTalkingData() {
         TCAgent.LOG_ON = BuildConfig.DEBUG;
         TCAgent.init(this);
         TCAgent.setReportUncaughtExceptions(true);
