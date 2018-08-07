@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">初心笔记</string>
+    <string name="app_name">初心日记</string>
 
     <!--region Common-->
     <string name="text_add_more">添加&#8230;</string>

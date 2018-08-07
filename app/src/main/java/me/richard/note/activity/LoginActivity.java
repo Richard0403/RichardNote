@@ -5,20 +5,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
+import com.google.gson.Gson;
+import com.umeng.socialize.UMAuthListener;
+import com.umeng.socialize.UMShareAPI;
+import com.umeng.socialize.bean.SHARE_MEDIA;
 import me.richard.note.R;
 import me.richard.note.activity.base.CommonActivity;
 import me.richard.note.config.Constants;
 import me.richard.note.databinding.ActivityLoginBinding;
 import me.richard.note.dialog.RegisterDialog;
+import me.richard.note.intro.IntroActivity;
+import me.richard.note.net.HttpRequest;
+import me.richard.note.net.api.HomeService;
+import me.richard.note.net.entity.BaseEntity;
+import me.richard.note.net.entity.SignInEntity;
+import me.richard.note.util.ToastUtils;
+import me.richard.note.util.preferences.UserPreferences;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoginActivity extends CommonActivity<ActivityLoginBinding> {
 
     private final static int RC_SIGN_IN = 0x01;
 
-//    private GoogleSignInClient mGoogleSignInClient;
-//
-//    private LoginButton loginButton;
-//    private CallbackManager callbackManager;
 
     public static void startForResult(Fragment fragment, int requestCode) {
         Intent intent = new Intent(fragment.getContext(), LoginActivity.class);
@@ -32,36 +42,7 @@ public class LoginActivity extends CommonActivity<ActivityLoginBinding> {
         activity.startActivityForResult(intent, requestCode);
     }
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_login);
 
-//        Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        editAccount = findViewById(R.id.in_account);
-//        editPassword = findViewById(R.id.in_password);
-
-
-
-//        setTheme();
-//
-//        initGoogleAuth();
-//
-//        initFBAuth();
-//
-//        SignInButton signInButton = findViewById(R.id.sign_in_button);
-//        signInButton.setSize(SignInButton.SIZE_STANDARD);
-//        signInButton.setOnClickListener(v -> signIn());
-//
-//        findViewById(R.id.btn_sign_out).setOnClickListener(v -> signOut());
-//    }
-
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        getSingedAccount();
-//    }
 
     @Override
     protected int getLayoutResId() {
@@ -70,221 +51,62 @@ public class LoginActivity extends CommonActivity<ActivityLoginBinding> {
 
     @Override
     protected void doCreateView(Bundle savedInstanceState) {
-        getBinding().btnLogin.setBackgroundColor(primaryColor());
-        getBinding().btnLogin.setUnpressedColor(primaryColor());
-
-        getBinding().register.setOnClickListener(view -> showRegisterDialog());
+        getBinding().ivQq.setOnClickListener(view -> umengAuth());
     }
 
-    private void showRegisterDialog() {
-        RegisterDialog regDlg = RegisterDialog.newInstance();
-        regDlg.setCancelable(false);
-        regDlg.show(getSupportFragmentManager(), "Register Dialog");
+    private void umengAuth(){
+        UMShareAPI.get(this).getPlatformInfo(this, SHARE_MEDIA.QQ, authListener);
     }
 
-//    private void initFBAuth() {
-//        callbackManager = CallbackManager.Factory.create();
-//        loginButton = findViewById(R.id.login_button);
-//        loginButton.setReadPermissions("email");
-//        // If using in a fragment
-////        loginButton.setFragment(this);
-//        // Other app specific specialization
-//
-//        // Callback registration
-//        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-//            @Override
-//            public void onSuccess(LoginResult loginResult) {
-//                ToastUtils.makeToast(LoginActivity.this, loginResult.toString());
-//            }
-//
-//            @Override
-//            public void onCancel() {
-//                ToastUtils.makeToast(LoginActivity.this, "Canceled");
-//            }
-//
-//            @Override
-//            public void onError(FacebookException exception) {
-//                ToastUtils.makeToast(LoginActivity.this, exception.toString());
-//            }
-//        });
-//    }
-//
-//    private void initGoogleAuth() {
-//        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-//                .requestProfile()
-//                .requestEmail()
-//                .build();
-//        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-//    }
-//
-//    private void signIn() {
-//        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-//        start(signInIntent, RC_SIGN_IN);
-//    }
-//
-//    private void signOut() {
-//        mGoogleSignInClient.signOut().addOnCompleteListener(this, task -> LogUtils.d("Google logout"));
-//    }
-//
-//    private void revokeAccess() {
-//        mGoogleSignInClient.revokeAccess().addOnCompleteListener(this, task -> LogUtils.d("Revoke Access"));
-//    }
-//
-//    private void getSingedAccount() {
-//        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
-//        updateUI(account);
-//    }
+    UMAuthListener authListener = new UMAuthListener() {
+        @Override
+        public void onStart(SHARE_MEDIA platform) {
+        }
+        @Override
+        public void onComplete(SHARE_MEDIA platform, int action, Map<String, String> data) {
+            String uid = data.get("uid");
+            String name = data.get("name");
+            String gender = data.get("gender");
+            String iconurl = data.get("iconurl");
+            int sex = "男".equals(gender)? 1:0;
 
-//    @Override
-//    public void onClick(View v) {
-//        switch (v.getId()){
-//            case R.id.btn_login:
-//                onConfirmLogin(v);
-//                break;
-//            case R.id.weibo:
-//                break;
-//            case R.id.wexin:
-//                break;
-//            case R.id.qq:
-//                break;
-//        }
-//    }
+            signIn(name, uid, "", sex, iconurl);
+        }
+        @Override
+        public void onError(SHARE_MEDIA platform, int action, Throwable t) {
+        }
+        @Override
+        public void onCancel(SHARE_MEDIA platform, int action) {
+        }
+    };
 
-//    private void onConfirmLogin(final View v){
-//        String strAccount = editAccount.getText().toString();
-//        String strPassword = editPassword.getText().toString();
-//        if(TextUtils.isEmpty(strAccount)){
-//            showSnackBar(v, R.string.account_toast);
-//        } else if (TextUtils.isEmpty(strPassword)){
-//            showSnackBar(v, R.string.password_toast);
-//        } else {
-//            UserKeeper.login(this, strAccount, strPassword, new UserKeeper.AccountValidCallback() {
-//                @Override
-//                public void onFinish(String result) {
-//                    Bundle data = new Bundle();
-//                    data.putString(KEY_STATUS, result);
-//                    Message msg = new Message();
-//                    msg.what = MSG_LN;
-//                    msg.obj = v;
-//                    msg.setData(data);
-//                    handler.sendMessage(msg);
-//                }
-//                @Override
-//                public void onError(Exception e) {
-//                    Bundle data = new Bundle();
-//                    data.putString(KEY_STATUS, UserKeeper.LoginInfo.LN_ERR);
-//                    Message msg = new Message();
-//                    msg.what = MSG_LN;
-//                    msg.obj = v;
-//                    msg.setData(data);
-//                    handler.sendMessage(msg);
-//                }
-//            });
-//        }
-//    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
+    }
 
-//    private Handler handler = new Handler(){
-//        @Override
-//        public void handleMessage(Message msg) {
-//           handle(msg);
-//        }
-//    };
+    private void signIn(String name, String qqOpenId, String wxUnionId, int sex, String header){
+        HttpRequest httpRequest = new HttpRequest<SignInEntity>() {
+            @Override
+            public String createJson() {
+                Map<String, Object> map = new HashMap<>();
+                map.put("name", name);
+                map.put("qqOpenId", qqOpenId);
+                map.put("wxUnionId",wxUnionId);
+                map.put("sex",sex);
+                map.put("header", header);
+                return new Gson().toJson(map);
+            }
 
-//    private void handle(Message msg){
-//        View v = (View) msg.obj;
-//        switch (msg.what){
-//            case MSG_LN:
-//                switch (msg.getData().getString(KEY_STATUS, "")){
-//                    case UserKeeper.LoginInfo.OFFLINE:
-//                        showSnackBar(v, R.string.check_net_toast);
-//                        break;
-//                    case UserKeeper.LoginInfo.ERR_NONE_EXIST:
-//                        showSnackBar(v, R.string.account_none_exist_toast);
-//                        break;
-//                    case UserKeeper.LoginInfo.ERR_WRONG_PSD:
-//                        showSnackBar(v, R.string.password_error_toast);
-//                        break;
-//                    case UserKeeper.LoginInfo.LN_ERR:
-//                        showSnackBar(v, R.string.known_error);
-//                        break;
-//                    case UserKeeper.LoginInfo.LN_OK:
-//                        MainActivity.activityStart(LoginActivity.this, editAccount.getText().toString());
-//                }
-//                break;
-//            case MSG_REG:
-//                switch (msg.getData().getString(KEY_STATUS, "")){
-//                    case UserKeeper.RegInfo.ERR_WRONG_FORMAT:
-//                        showSnackBar(v, R.string.email_format);
-//                        break;
-//                    case UserKeeper.RegInfo.ERR_PSD_LONG:
-//                        showSnackBar(v, R.string.psd_long);
-//                        break;
-//                    case UserKeeper.RegInfo.ERR_PSD_SHORT:
-//                        showSnackBar(v, R.string.psd_short);
-//                        break;
-//                    case UserKeeper.RegInfo.ERR_PSD_SIMPLE:
-//                        showSnackBar(v, R.string.psd_numeric);
-//                        break;
-//                    case UserKeeper.RegInfo.ERR_PSD_ILLEGAL:
-//                        showSnackBar(v, R.string.psd_Ill_char);
-//                        break;
-//                    case UserKeeper.RegInfo.OFFLINE:
-//                        showSnackBar(v, R.string.check_net);
-//                        break;
-//                    case UserKeeper.RegInfo.ERR_ACC_EXISTED:
-//                        showSnackBar(v, R.string.email_registered);
-//                        break;
-//                    case UserKeeper.RegInfo.REG_OK:
-//                        editAccount.setText(msg.getData().getString(KEY_ACCOUNT, ""));
-//                        editPassword.setText(msg.getData().getString(KEY_PASSWORD, ""));
-//                        if (regDlg != null && regDlg.isShowing()){
-//                            regDlg.dismiss();
-//                        }
-//                        showSnackBar(v, R.string.rgst_success);
-//                        break;
-//                    case UserKeeper.RegInfo.REG_ERR:
-//                        showSnackBar(v, R.string.known_error);
-//                        break;
-//                }
-//                break;
-//        }
-//    }
-
-//    private void showSnackBar(View view, int res){
-//        Snackbar.make(view, res, Snackbar.LENGTH_SHORT).setAction("Action", null).show();
-//    }
-
-//    private void setTheme(){
-//        UIRippleButton btnLogin = (UIRippleButton) findViewById(R.id.btn_login);
-//        btnLogin.setBackgroundColor(primaryColor());
-//        btnLogin.setUnpressedColor(primaryColor());
-//    }
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        if (resultCode == Activity.RESULT_OK) {
-//            switch (requestCode) {
-//                case RC_SIGN_IN:
-//                    Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-//                    handleSignInResult(task);
-//                    break;
-//            }
-//        }
-//        super.onActivityResult(requestCode, resultCode, data);
-//        callbackManager.onActivityResult(requestCode, resultCode, data);
-//    }
-
-//    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
-//        try {
-//            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
-//            updateUI(account);
-//        } catch (ApiException e) {
-//            LogUtils.w("signInResult:failed code=" + e.getStatusCode());
-//            updateUI(null);
-//        }
-//    }
-
-//    private void updateUI(GoogleSignInAccount account) {
-//        if (account != null) ToastUtils.makeToast(account.zzaaq());
-//    }
+            @Override
+            protected void onSuccess(SignInEntity result) {
+                super.onSuccess(result);
+                UserPreferences.getInstance().setUserEntity(result.getData());
+                ToastUtils.makeToast(result.getMsg());
+                startActivity(MainActivity.class);
+            }
+        };
+        httpRequest.start(HomeService.class, "signIn");
+    }
 }

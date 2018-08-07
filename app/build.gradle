@@ -69,6 +69,7 @@ android {
 //        prod {}
 //    }
 }
+
 def releaseTime() {
     return new Date().format("yyyy-MM-dd-HH-mm")
 }
@@ -147,5 +148,6 @@ dependencies {
     compile project(path: ':photoview')
     compile project(path: ':markdown')
     implementation files('libs/BaiduLBS_Android.jar')
-    implementation files('libs/SaaS_AppAnalytics_Android_SDK_V4.0.17.jar')
+    //Umeng
+    compile 'com.umeng.analytics:analytics:latest.integration'
 }

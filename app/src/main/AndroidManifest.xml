@@ -1,206 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.richard.note">
+          package="me.richard.note">
 
     <!-- ================Permissions normal================ -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
 
     <!-- 读写文件 -->
 
 
     <!-- ================Permissions required by Baidu Location================ -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
     <!-- ================Permissions to add shortcut on desktop================ -->
-    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
-    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
 
     <!-- ================Permissions required by notifications================ -->
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.GET_TASKS"  />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
 
     <uses-feature
-        android:name="android.hardware.touchscreen"
-        android:required="false" />
+            android:name="android.hardware.touchscreen"
+            android:required="false"/>
     <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
+            android:name="android.hardware.camera"
+            android:required="false"/>
     <uses-feature
-        android:name="android.hardware.location.gps"
-        android:required="false" />
+            android:name="android.hardware.location.gps"
+            android:required="false"/>
 
     <application
-        android:name="me.richard.note.PalmApp"
-        android:allowBackup="true"
-        android:icon="@mipmap/marknote_launcher"
-        android:label="@string/app_name"
-        android:largeHeap="true"
-        android:roundIcon="@mipmap/marknote_launcher"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme.FullScreen.Light">
+            android:name=".PalmApp"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:roundIcon="@mipmap/ic_launcher"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme.FullScreen.Light">
         <activity
-            android:name="me.richard.note.activity.MainActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="singleTop">
+                android:name=".activity.LoginActivity"
+                android:launchMode="singleTop">
+        </activity>
+        <activity android:name=".activity.SplashActivity"
+                  android:theme="@style/AppSplash">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.google.android.gm.action.AUTO_SEND" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:mimeType="*/*" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.SEND" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:mimeType="*/*" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.SEND_MULTIPLE" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <data android:mimeType="*/*" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="hashtag" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="me.richard.note.intro.IntroActivity" />
-        <activity android:name="me.richard.note.activity.SettingsActivity" />
-        <activity android:name="me.richard.note.activity.FabSortActivity" />
-        <activity android:name="me.richard.note.activity.SketchActivity" />
         <activity
-            android:name="me.richard.note.activity.GalleryActivity"
-            android:theme="@style/PictureViewTheme" />
-        <activity
-            android:name="me.richard.note.activity.ContentActivity"
-            android:exported="true" />
-        <activity android:name="me.richard.note.activity.ArchiveActivity" />
-        <activity android:name="me.richard.note.activity.TrashedActivity" />
-        <activity android:name="me.richard.note.activity.UserInfoActivity" />
-        <activity android:name="me.richard.note.activity.LoginActivity" />
-        <activity android:name="me.richard.note.activity.SearchActivity" />
+                android:name=".activity.MainActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:launchMode="singleTop">
 
-
-        <service android:name="com.talkingdata.sdk.TDAntiCheatingService"
-            android:process="com.talkingdata.sdk.TDAntiCheatingService">  <!--用户质量评估Service可以配置在主进程或者单独进程-->
             <intent-filter>
-                <action android:name="com.talkingdata.sdk.TDAntiCheatingService" />
+                <action android:name="android.intent.action.SEARCH"/>
             </intent-filter>
-        </service>
-        <meta-data android:name="TD_APP_ID" android:value="D3973B32FCA345639AFFBFC5EFB5460A" />
-        <meta-data android:name="TD_CHANNEL_ID" android:value="Your_channel_id" />
+            <intent-filter>
+                <action android:name="com.google.android.gm.action.AUTO_SEND"/>
 
-        <!--<meta-data-->
-            <!--android:name="io.fabric.ApiKey"-->
-            <!--android:value="aa14224ea2102fef301d211dac552635f37b1f9e" />-->
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="hashtag"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".intro.IntroActivity"/>
+        <activity android:name=".activity.SettingsActivity"/>
+        <activity android:name=".activity.FabSortActivity"/>
+        <activity android:name=".activity.SketchActivity"/>
+        <activity
+                android:name=".activity.GalleryActivity"
+                android:theme="@style/PictureViewTheme"/>
+        <activity
+                android:name=".activity.ContentActivity"
+                android:exported="true"/>
+        <activity android:name=".activity.ArchiveActivity"/>
+        <activity android:name=".activity.TrashedActivity"/>
+        <activity android:name=".activity.UserInfoActivity"/>
+        <activity android:name=".activity.SearchActivity"/>
+
+        <meta-data
+                android:name="UMENG_APPKEY"
+                android:value="5b68f281f43e48068b00012c"/>
+        <meta-data
+                android:name="UMENG_CHANNEL"
+                android:value="Sever"/>
+
+        <!-- <meta-data -->
+        <!-- android:name="io.fabric.ApiKey" -->
+        <!-- android:value="aa14224ea2102fef301d211dac552635f37b1f9e" /> -->
+
 
         <!-- ================Baidu Map API START================ -->
         <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote" />
+                android:name="com.baidu.location.f"
+                android:enabled="true"
+                android:process=":remote"/>
 
         <meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="aiA6Li5uRE1bd7WfazNYcsjIxmW4lDS9" />
+                android:name="com.baidu.lbsapi.API_KEY"
+                android:value="aiA6Li5uRE1bd7WfazNYcsjIxmW4lDS9"/>
         <!-- ================Baidu Map API END================ -->
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="me.richard.note.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="me.richard.note.provider"
+                android:exported="false"
+                android:grantUriPermissions="true">
             <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/provider_paths"/>
         </provider>
 
-        <service android:name="me.richard.note.async.DataBackupIntentService" />
-        <service android:name="me.richard.note.async.onedrive.OneDriveBackupService" />
+        <service android:name=".async.DataBackupIntentService"/>
+        <service android:name=".async.onedrive.OneDriveBackupService"/>
 
         <activity
-            android:name="me.richard.note.activity.LockActivity"
-            android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" />
+                android:name=".activity.LockActivity"
+                android:theme="@android:style/Theme.Holo.Dialog.NoActionBar"/>
 
         <!-- region App Widget -->
-        <receiver android:name="me.richard.note.widget.desktop.ListWidgetProvider">
+        <receiver android:name=".widget.desktop.ListWidgetProvider">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
 
             <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/list_widget" />
+                    android:name="android.appwidget.provider"
+                    android:resource="@xml/list_widget"/>
         </receiver>
-        <receiver android:name="me.richard.note.widget.desktop.SimpleWidgetProvider">
+        <receiver android:name=".widget.desktop.SimpleWidgetProvider">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
 
             <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/simple_widget_provider_info" />
+                    android:name="android.appwidget.provider"
+                    android:resource="@xml/simple_widget_provider_info"/>
         </receiver>
-        <receiver android:name="me.richard.note.widget.desktop.DesktopShortcutAppWidget">
+        <receiver android:name=".widget.desktop.DesktopShortcutAppWidget">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
 
             <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/shortcut_app_widget" />
+                    android:name="android.appwidget.provider"
+                    android:resource="@xml/shortcut_app_widget"/>
         </receiver>
 
         <service
-            android:name="me.richard.note.widget.desktop.NotesListWidgetService"
-            android:permission="android.permission.BIND_REMOTEVIEWS" />
+                android:name=".widget.desktop.NotesListWidgetService"
+                android:permission="android.permission.BIND_REMOTEVIEWS"/>
 
         <activity
-            android:name="me.richard.note.activity.ConfigActivity"
-            android:theme="@style/TransParentDialog">
+                android:name=".activity.ConfigActivity"
+                android:theme="@style/TransParentDialog">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="me.richard.note.activity.QuickNoteActivity"
-            android:configChanges="orientation|keyboardHidden|keyboard|navigation"
-            android:excludeFromRecents="true"
-            android:launchMode="singleInstance"
-            android:taskAffinity=""
-            android:theme="@style/TransParentDialog" />
+                android:name=".activity.QuickNoteActivity"
+                android:configChanges="orientation|keyboardHidden|keyboard|navigation"
+                android:excludeFromRecents="true"
+                android:launchMode="singleInstance"
+                android:taskAffinity=""
+                android:theme="@style/TransParentDialog"/>
         <!-- endregion -->
 
-        <activity android:name="me.richard.note.activity.DirectoryActivity" />
-        <activity android:name="me.richard.note.activity.MenuSortActivity"></activity>
+
+        <!-- Umeng start -->
+        <activity
+                android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+                android:configChanges="keyboardHidden|orientation"
+                android:exported="false"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+        <activity
+                android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+                android:configChanges="keyboardHidden|orientation"
+                android:exported="false"
+                android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+                android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+                android:launchMode="singleTask"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".wxapi.WXEntryActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+                android:name="com.tencent.tauth.AuthActivity"
+                android:launchMode="singleTask"
+                android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent100424468"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.tencent.connect.common.AssistActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- Umeng end -->
+
+        <activity android:name=".activity.DirectoryActivity"/>
+        <activity android:name=".activity.MenuSortActivity"/>
+
     </application>
 
 </manifest>

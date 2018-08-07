@@ -8,6 +8,12 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
+    <style name="AppSplash" parent="ThemeBaseLight">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:background">@mipmap/bg_splash</item>
+    </style>
     <style name="AppTheme.FullScreen.Light" parent="ThemeBaseLight"/>
 
     <style name="AppThemeNormalLight" parent="ThemeBaseLight"/>

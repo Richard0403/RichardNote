@@ -15,6 +15,7 @@
     <string name="delete_external_storage_backup" translatable="false">delete_external_storage_backup</string>
     <string name="import_from_external_storage" translatable="false">import_from_external_storage</string>
     <string name="key_backup_to_external_storage" translatable="false">backup_to_external_storage</string>
+    <string name="key_user_entity" translatable="false">user_entity</string>
 
     <!--region note-->
     <string name="key_auto_compress_image" translatable="false">key_auto_compress_image</string>

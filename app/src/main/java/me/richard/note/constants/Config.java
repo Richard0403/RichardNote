@@ -15,7 +15,7 @@ public class Config {
     public class API{
 
         /** 登录 **/
-        public static final String LOGIN = "tourist/login";
+        public static final String LOGIN = "auth/register";
         /** 获取版本号**/
         public static final String VERSION = "version/getVersion";
     }

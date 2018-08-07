@@ -10,6 +10,7 @@ import me.richard.note.PalmApp;
 import me.richard.note.R;
 import me.richard.note.model.enums.FabSortItem;
 import me.richard.note.model.enums.Operation;
+import me.richard.note.net.entity.SignInEntity;
 import me.richard.note.util.ColorUtils;
 import my.shouheng.palmmarkdown.tools.MarkdownFormat;
 
@@ -169,5 +170,12 @@ public class UserPreferences extends BasePreferences {
 
     public boolean fastScrollerEnabled() {
         return getBoolean(R.string.key_fast_scroller, false);
+    }
+
+    public SignInEntity.DataBean getUserEntity(){
+        return getObject(R.string.key_user_entity, SignInEntity.DataBean.class);
+    }
+    public void setUserEntity(SignInEntity.DataBean userEntity){
+        setObject(R.string.key_user_entity, userEntity);
     }
 }

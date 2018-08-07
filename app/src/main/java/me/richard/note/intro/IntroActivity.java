@@ -14,11 +14,12 @@ public class IntroActivity extends AppIntro2 {
         context.startActivity(new Intent(context.getApplicationContext(), IntroActivity.class));
     }
 
-    public static void launchIfNecessary(Context context) {
+    public static boolean launchIfNecessary(Context context) {
         if (PersistPreferences.getInstance().isTourActivityShowed()) {
-            return;
+            return false;
         }
         launch(context);
+        return true;
     }
 
     @Override
