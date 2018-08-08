@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 
 import com.afollestad.materialdialogs.color.ColorChooserDialog;
+import com.umeng.analytics.MobclickAgent;
 import me.richard.note.util.ActivityUtils;
 
 /**
@@ -71,5 +72,18 @@ public abstract class CommonActivity<T extends ViewDataBinding> extends ThemedAc
 
     public void superOnBackPressed() {
         super.onBackPressed();
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

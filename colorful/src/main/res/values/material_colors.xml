@@ -3,7 +3,8 @@
 
     <!-- google's material design colours from
     http://www.google.com/design/spec/style/color.html#color-ui-color-palette -->
-    
+    <color name="colorPrimary">#0dbbd2</color>
+    <color name="colorPrimaryDark">#ff16aec2</color>
     <!--red-->
     <color name="md_red_50">#FFEBEE</color>
     <color name="md_red_100">#FFCDD2</color>

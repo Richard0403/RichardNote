@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import com.github.paolorotolo.appintro.AppIntro2;
 
+import me.richard.note.activity.MainActivity;
+import me.richard.note.activity.SplashActivity;
 import me.richard.note.util.preferences.PersistPreferences;
 
 public class IntroActivity extends AppIntro2 {
@@ -35,6 +37,7 @@ public class IntroActivity extends AppIntro2 {
     @Override
     public void onDonePressed() {
         PersistPreferences.getInstance().setTourActivityShowed(true);
+        startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 

@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5"
-        tools:src="@drawable/mark_note"
+        tools:src="@mipmap/ic_launcher_big"
         android:layout_gravity="center"
         android:paddingLeft="@dimen/intro_side_padding"
         android:paddingStart="@dimen/intro_side_padding"

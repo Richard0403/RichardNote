@@ -147,7 +147,9 @@ dependencies {
     compile project(path: ':colorful')
     compile project(path: ':photoview')
     compile project(path: ':markdown')
-    implementation files('libs/BaiduLBS_Android.jar')
     //Umeng
-    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.umeng.sdk:common:1.5.3'
+    compile 'com.umeng.sdk:analytics:7.5.0'
+    compile 'com.umeng.sdk:utdid:1.1.5.3'
+    compile 'com.umeng.sdk:push:4.2.0'
 }

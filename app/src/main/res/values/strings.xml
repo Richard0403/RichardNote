@@ -107,8 +107,8 @@
     <string name="intro_4_description">Light and dark\n13 kinds of primary color\n16 kinds of accent color</string>
     <string name="intro_5_title">Attachment</string>
     <string name="intro_5_description">Multiple kinds of attachments\nsketch, picture, photo, video\naudio, file, location</string>
-    <string name="intro_6_title">Enjoy</string>
-    <string name="intro_6_description">Don\'t forget to subscribe\nour community!</string>
+    <string name="intro_6_title">Write a note</string>
+    <string name="intro_6_description">Light your life</string>
     <!--endregion introduction-->
 
     <!--region Common->Capture-->

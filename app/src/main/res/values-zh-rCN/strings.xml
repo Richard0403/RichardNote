@@ -98,7 +98,7 @@
 
     <!--region Common->Intro Page-->
     <string name="intro_1_title">欢迎使用 %s</string>
-    <string name="intro_1_description">感谢您使用 %s\n\n一款帮助您提升工作效率\n记录生活中精彩时刻的\nMarkdown日记应用</string>
+    <string name="intro_1_description"> %s 记录生活的精彩</string>
     <string name="intro_2_title">Markdown</string>
     <string name="intro_2_description">Markdown语法支持\n分享、导出图片和PDF</string>
     <string name="intro_3_title">导出</string>
@@ -107,8 +107,8 @@
     <string name="intro_4_description">日夜主题\n13种主色调 16种强调色</string>
     <string name="intro_5_title">附件</string>
     <string name="intro_5_description">手绘 图片 照片 视频\n音频 文件 位置</string>
-    <string name="intro_6_title">祝您使用愉快</string>
-    <string name="intro_6_description">加入社区！</string>
+    <string name="intro_6_title">写篇日记</string>
+    <string name="intro_6_description">点亮生活</string>
     <!--endregion introduction-->
 
     <!--region Common->Capture-->

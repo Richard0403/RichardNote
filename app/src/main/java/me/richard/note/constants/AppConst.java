@@ -27,7 +27,7 @@ public class AppConst {
      * 正式线上服务器地址
      * TODO 上线测试前请务必确认并填写
      */
-    private static final String BASE_URL = "https://u.reader.myxiaoyou.top/";
+    private static final String BASE_URL = "http://ifinder.cc:8080/";
 
     /**
      * 请求头数据传输格式

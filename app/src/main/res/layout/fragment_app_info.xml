@@ -30,7 +30,7 @@
 
                     <android.support.v7.widget.AppCompatImageView
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/mark_note"
+                        android:src="@mipmap/ic_launcher_big"
                         android:layout_margin="20dp"
                         android:layout_width="160dp"
                         android:layout_height="160dp" />

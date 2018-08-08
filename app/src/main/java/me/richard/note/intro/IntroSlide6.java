@@ -14,10 +14,10 @@ public class IntroSlide6 extends IntroFragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		background.setBackgroundResource(R.color.intro_color_1);
+		background.setBackgroundResource(R.color.theme_color);
 		title.setText(R.string.intro_6_title);
 		image.setVisibility(View.GONE);
-		imageSmall.setImageResource(R.drawable.ic_google_plus);
+		imageSmall.setImageResource(R.mipmap.ic_launcher_big);
 		imageSmall.setVisibility(View.VISIBLE);
 		imageSmall.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_VIEW);
