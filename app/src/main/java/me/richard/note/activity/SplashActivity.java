@@ -10,7 +10,7 @@ import me.richard.note.intro.IntroActivity;
 import me.richard.note.util.LogUtils;
 
 public class SplashActivity extends CommonActivity<ActivitySplashBinding> {
-    CountDownTimer timer = new CountDownTimer(2*1000+50, 500) {
+    CountDownTimer timer = new CountDownTimer(1*1000+50, 500) {
         @Override
         public void onTick(long millisUntilFinished) {
             LogUtils.i("=="+millisUntilFinished);
