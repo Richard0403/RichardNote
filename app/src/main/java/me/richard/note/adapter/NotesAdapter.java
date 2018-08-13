@@ -81,7 +81,11 @@ public class NotesAdapter extends BaseMultiItemQuickAdapter<NotesAdapter.MultiIt
     private void convertNoteExpanded(BaseViewHolder holder, Note note) {
         holder.itemView.setBackgroundColor(PalmApp.getColorCompact(isDarkTheme ?
                 R.color.dark_theme_background : R.color.light_theme_background));
-        holder.setText(R.id.tv_note_title, note.getTitle());
+        if(!PalmApp.getStringCompact(R.string.note_default_name).equals(note.getTitle())){
+            holder.setText(R.id.tv_note_title, note.getTitle());
+        }else{
+            holder.setGone(R.id.tv_note_title, false);
+        }
         holder.setText(R.id.tv_content, getShortPreviewContent(note.getPreviewContent()));
 
 //        holder.setText(R.id.tv_time, TimeUtils.getPrettyTime(note.getAddedTime()));

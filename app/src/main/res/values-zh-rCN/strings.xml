@@ -127,14 +127,14 @@
     <!--endregion-->
 
     <!--region Common->DrawerItems-->
-    <string name="drawer_menu_notes">日记信息</string>
+    <string name="drawer_menu_notes">日记</string>
     <string name="drawer_menu_minds">小纸条</string>
     <string name="drawer_menu_tags">标签</string>
     <string name="drawer_menu_notices">提醒信息</string>
     <string name="drawer_menu_setting">设置</string>
     <string name="drawer_menu_trash">废纸篓</string>
     <string name="drawer_menu_archive">归档</string>
-    <string name="drawer_menu_sync">数据同步</string>
+    <string name="drawer_menu_sync">同步(OneDrive)</string>
     <!--endregion-->
     <!--endregion-->
 
@@ -165,7 +165,7 @@
     <string name="note_failed_to_read_file">读取文件内容失败</string>
     <string name="note_failed_to_get_note_content">读取日记内容失败</string>
     <string name="text_no_such_note">没有找到该日记</string>
-    <string name="note_note_title">日记标题</string>
+    <string name="note_note_title">日记标题（可空）</string>
     <string name="note_write_down_what_you_want">写下此刻的想法&#8230;</string>
     <string name="note_default_notebook">默认日记本</string>
     <string name="edit_notebook">编辑日记本</string>
@@ -419,7 +419,7 @@
 
     <!--region Setting->AppInfo-->
     <string name="app_info">程序信息</string>
-    <string name="app_description">一款 Markdown 日记应用</string>
+    <string name="app_description">写篇日记，点亮生活</string>
     <string name="help_development">协助开发</string>
     <string name="translation">翻译</string>
     <string name="translate_to_other_languages">将 %s 翻译成其他语言</string>
@@ -543,7 +543,7 @@
 
     <!--regionv1.1.2-->
     <string name="text_external_storage">外部存储</string>
-    <string name="text_one_drive">OneDrive</string>
+    <string name="text_one_drive">OneDrive(强烈推荐)</string>
     <string name="one_drive_backup_title">连接 OneDrive</string>
     <string name="one_drive_backup_sub_title">登录 OneDrive 以同步文件</string>
     <string name="sign_out_one_drive">登出 OneDrive</string>

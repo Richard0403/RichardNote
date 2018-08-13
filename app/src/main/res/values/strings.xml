@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mark Note</string>
+    <string name="app_name">Simple Note</string>
 
     <!--region Common-->
     <string name="text_add_more">Add&#8230;</string>
@@ -545,7 +545,7 @@
 
     <!--region v1.1.2-->
     <string name="text_external_storage">External Storage</string>
-    <string name="text_one_drive">OneDrive</string>
+    <string name="text_one_drive">OneDrive(Recommend)</string>
     <string name="one_drive_backup_title">Connect OneDrive</string>
     <string name="one_drive_backup_sub_title">Sign in to synchronize files to OneDrive</string>
     <string name="sign_out_one_drive">Sign out OneDrive</string>
