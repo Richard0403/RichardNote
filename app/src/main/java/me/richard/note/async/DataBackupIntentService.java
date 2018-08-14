@@ -147,6 +147,11 @@ public class DataBackupIntentService extends IntentService {
         String title = getString(R.string.backup_data_import_completed);
         String text = getString(R.string.backup_click_to_refresh_application);
         createNotification(intent, this, title, text, backupDir);
+
+        //发送广播 刷新数据
+        Intent bcIntent = new Intent();
+        bcIntent.setAction(Constants.ACTION_NOTE_CHANGE_BROADCAST);
+        sendBroadcast(bcIntent);
     }
 
     private boolean importDB(File backupDir) {
