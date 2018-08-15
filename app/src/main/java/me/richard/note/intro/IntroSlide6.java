@@ -14,7 +14,7 @@ public class IntroSlide6 extends IntroFragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		background.setBackgroundResource(R.color.theme_color);
+		background.setBackgroundResource(R.color.intro_color_6);
 		title.setText(R.string.intro_6_title);
 		image.setVisibility(View.GONE);
 		imageSmall.setImageResource(R.mipmap.ic_launcher_big);

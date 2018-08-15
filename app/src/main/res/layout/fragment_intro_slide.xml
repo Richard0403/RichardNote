@@ -30,7 +30,7 @@
         android:paddingEnd="@dimen/intro_side_padding"/>
 
     <ImageView android:id="@+id/intro_image_small"
-        android:layout_width="450dp"
+        android:layout_width="250dp"
         android:layout_height="0dp"
         android:layout_weight="5"
         android:layout_gravity="center"

@@ -31,7 +31,7 @@ public class IntroActivity extends AppIntro2 {
         addSlide(new IntroSlide3(), getApplicationContext());
         addSlide(new IntroSlide4(), getApplicationContext());
         addSlide(new IntroSlide5(), getApplicationContext());
-        addSlide(new IntroSlide6(), getApplicationContext());
+//        addSlide(new IntroSlide6(), getApplicationContext());
     }
 
     @Override

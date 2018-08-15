@@ -29,6 +29,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.RelativeLayout;
 
 import com.afollestad.materialdialogs.color.ColorChooserDialog;
+import com.app.hubert.guide.NewbieGuide;
+import com.app.hubert.guide.model.GuidePage;
 import com.bumptech.glide.Glide;
 import com.github.clans.fab.FloatingActionButton;
 
@@ -176,6 +178,17 @@ public class MainActivity extends CommonActivity<ActivityMainBinding> implements
         toNotesFragment(true);
 
         checkUpdate();
+
+        setGuideView();
+    }
+
+    private void setGuideView() {
+        NewbieGuide.with(this)
+                .setLabel("guide1")
+                .addGuidePage(GuidePage.newInstance()
+                        .addHighLight(getBinding().menu.getChildAt(5))
+                        .setLayoutRes(R.layout.layout_guide_start))
+                .show();
     }
 
 
